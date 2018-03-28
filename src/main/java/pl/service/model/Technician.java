@@ -8,6 +8,7 @@ public class Technician {
 
     @Id
     @GeneratedValue
+    @Column(name = "TechnicianID")
     private Integer technicianId;
 
     @Column(name = "Name")

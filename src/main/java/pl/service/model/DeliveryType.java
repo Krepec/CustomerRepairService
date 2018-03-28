@@ -8,6 +8,7 @@ public class DeliveryType {
 
     @Id
     @GeneratedValue
+    @Column(name = "Delivery_typeID")
     private Integer delivetyTypeId;
 
     @Column(name = "Delivery")

@@ -8,6 +8,7 @@ public class Status {
 
     @Id
     @GeneratedValue
+    @Column(name = "StatusID")
     private Integer statusId;
 
     @Column(name = "Status")

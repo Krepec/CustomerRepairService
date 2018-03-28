@@ -10,6 +10,7 @@ public class Customer {
 
     @Id
     @GeneratedValue
+    @Column(name = "CustomerID")
     private Integer customerId;
 
     @Column(name = "Name")

@@ -9,6 +9,7 @@ public class Repair {
 
     @Id
     @GeneratedValue
+    @Column(name = "RepairID")
     private Integer repairId;
 
     @Column(name = "DeviceID")

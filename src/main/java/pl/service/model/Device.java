@@ -8,6 +8,7 @@ public class Device {
 
     @Id
     @GeneratedValue
+    @Column(name = "DeviceID")
     private Integer deviceId;
 
     @Column(name = "Mark")
@@ -71,7 +72,5 @@ public class Device {
         this.imei = imei;
     }
 
-    public Device() {
-
-    }
+    public Device() {}
 }

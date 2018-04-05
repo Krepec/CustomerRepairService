@@ -3,7 +3,7 @@ package pl.service.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Delivery_type")
+@Table(name = "delivery_type")
 public class DeliveryType {
 
     @Id

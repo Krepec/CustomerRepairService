@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "Repairs")
+@Table(name = "repairs")
 public class Repair {
 
     @Id
@@ -36,14 +36,18 @@ public class Repair {
     @Column(name = "Start_date")
     private Date startDate;
 
+    @Column(name = "End_date")
+    private Date endDate;
+
     @Column(name = "Purchase_date")
     private Date purchaseDate;
+
+    @Column(name = "Issue_describe")
+    private String issueDescribe;
 
     @Column(name = "Comments")
     private String comments;
 
-    @Column(name = "Issue_describe")
-    private String issueDescribe;
 
     public void setRepairId(Integer repairId) {
         this.repairId = repairId;
@@ -117,6 +121,14 @@ public class Repair {
         return startDate;
     }
 
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
+    }
+
     public void setPurchaseDate(Date purchaseDate) {
         this.purchaseDate = purchaseDate;
     }
@@ -142,7 +154,7 @@ public class Repair {
     }
 
     public Repair(Integer repairId, Integer deviceId, Integer customerId, Integer technicianId, Integer partId, Integer statusId,
-                  Integer repairTypeId, Integer deliveryTypeId, Date startDate, Date purchaseDate, String comments, String issueDescribe) {
+                  Integer repairTypeId, Integer deliveryTypeId, Date startDate, Date endDate, Date purchaseDate, String issueDescribe, String comments) {
 
         this.repairId = repairId;
         this.deviceId = deviceId;
@@ -152,6 +164,7 @@ public class Repair {
         this.statusId = statusId;
         this.repairTypeId = repairTypeId;
         this.deliveryTypeId = deliveryTypeId;
+        this.endDate = endDate;
         this.startDate = startDate;
         this.purchaseDate = purchaseDate;
         this.comments = comments;

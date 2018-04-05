@@ -3,7 +3,7 @@ package pl.service.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Parts")
+@Table(name = "parts")
 public class Parts {
 
     @Id
@@ -14,8 +14,11 @@ public class Parts {
     @Column(name = "Part_typeID")
     private Integer partTypeId;
 
-    @Column(name = "Part_type_name")
-    private String partTypeName;
+    @Column(name = "Part_name")
+    private String partName;
+
+    @Column(name = "Price")
+    private Double price;
 
     public void setRepairId(Integer repairId) {
         this.repairId = repairId;
@@ -34,18 +37,27 @@ public class Parts {
         this.partTypeId = partTypeId;
     }
 
-    public String getPartTypeName() {
-        return partTypeName;
+    public String getPartName() {
+        return partName;
     }
 
-    public void setPartTypeName(String partTypeName) {
-        this.partTypeName = partTypeName;
+    public void setPartName(String partName) {
+        this.partName = partName;
     }
 
-    public Parts(Integer repairId, Integer partTypeId, String partTypeName) {
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public Parts(Integer repairId, Integer partTypeId, String partTypeName, Double price) {
         this.repairId = repairId;
         this.partTypeId = partTypeId;
-        this.partTypeName = partTypeName;
+        this.partName = partTypeName;
+        this.price = price;
     }
 
     public Parts() {

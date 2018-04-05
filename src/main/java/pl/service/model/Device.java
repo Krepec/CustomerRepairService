@@ -3,7 +3,7 @@ package pl.service.model;
 import javax.persistence.*;
 // zmienic typ w bazie danych
 @Entity
-@Table(name = "Devices")
+@Table(name = "devices")
 public class Device {
 
     @Id
@@ -22,6 +22,9 @@ public class Device {
 
     @Column(name = "Imei")
     private Long imei;
+
+    @Column(name = "Comments")
+    private String comments;
 
     public void setDeviceId(Integer deviceId) {
         this.deviceId = deviceId;
@@ -63,13 +66,21 @@ public class Device {
         return imei;
     }
 
+    public String getComments() {
+        return comments;
+    }
 
-    public Device(Integer deviceId, String mark, String model, String serialNumber, Long imei) {
+    public void setComments(String comments) {
+        this.comments = comments;
+    }
+
+    public Device(Integer deviceId, String mark, String model, String serialNumber, Long imei, String comments) {
         this.deviceId = deviceId;
         this.mark = mark;
         this.model = model;
         this.serialNumber = serialNumber;
         this.imei = imei;
+        this.comments = comments;
     }
 
     public Device() {}

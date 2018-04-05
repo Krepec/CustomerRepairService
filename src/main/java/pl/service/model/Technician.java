@@ -3,7 +3,7 @@ package pl.service.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Technicians")
+@Table(name = "technicians")
 public class Technician {
 
     @Id

@@ -3,7 +3,7 @@ package pl.service.model;
 import javax.persistence.*;
 
 @Entity
-@Table
+@Table(name = "repair_type")
 public class RepairType {
 
 

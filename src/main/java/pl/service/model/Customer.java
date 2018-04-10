@@ -9,7 +9,7 @@ public class Customer {
     @Id
     @GeneratedValue
     @Column(name = "CustomerID")
-    private Integer customerId;
+    private long customerId;
 
     @Column(name = "Name")
     private String name;
@@ -46,7 +46,7 @@ public class Customer {
         this.customerId = customerId;
     }
 
-    public Integer getCustomerId() {
+    public long getCustomerId() {
         return customerId;
     }
 
@@ -130,7 +130,7 @@ public class Customer {
         return email;
     }
 
-    public Customer(Integer customerId, String name, String surname, String phone_number1,
+    public Customer(long customerId, String name, String surname, String phone_number1,
                     String phone_number2, String street, String building_number, String flat_number,
                     String postal_code, String city, String email) {
 

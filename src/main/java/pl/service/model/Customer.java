@@ -154,7 +154,7 @@ public class Customer {
     @Override
     public String toString() {
         return "Id: " + customerId + " Imię: " + name + " Nazwisko: \n" + surname + " Telefon1: " + phoneNumber1+ " Telefon2: " + phoneNumber2 +
-                " Ulica: " + street+ " Numer budynku: " + buildingNumber + "Numer mieszkania: " + flatNumber + " Kod pocztowy: " + postalCode +
+                " Ulica: " + street+ " Numer budynku: " + buildingNumber + " Numer mieszkania: " + flatNumber + " Kod pocztowy: " + postalCode +
                 " Miasto: " + city +" E-mail: " + email;
     }
 }

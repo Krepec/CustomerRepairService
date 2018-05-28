@@ -14,7 +14,7 @@ public class CustomerController {
     private CustomerRepository customerRepository;
 
     @GetMapping("/all")
-    public String getAll() {
+    public String getAllCustomers() {
         return String.valueOf(customerRepository.findAll());
 
     }
@@ -50,18 +50,14 @@ public class CustomerController {
         return String.valueOf(customerRepository.findByNameAndCity(name, city));
     }
 
-//    @PostMapping("/customerid")
 
+    //    @PostMapping
     @RequestMapping(value="/customers", method = RequestMethod.POST, consumes = "application/json")
-    public String addCustomer(@RequestBody CustomerId customerId){
-        return String.valueOf(customerRepository.save(new Customer(customerId.getCustomerId(),"","","","","","","","","","")));
+    public String addCustomer(@RequestBody Customer customer){
+        return String.valueOf(customerRepository.save(new Customer(customer.getCustomerId(),customer.getName(),
+                customer.getSurname(),customer.getPhoneNumber1(),customer.getPhoneNumber2(),customer.getStreet(),
+                customer.getBuildingNumber(),customer.getFlatNumber(),customer.getPostalCode(),customer.getCity(),
+                customer.getEmail())));
     }
 }
 
-// stworzylismy klase customerId ponieważ nie przekazujemy wszystkich wartosci z konstruktora w klasie customers (przekazujemy tylko jeden paramets customerId) - wymagane sa settery i gettery
-// bibliotek JSON potrzebuje opakować propertisow w obiekt (serializacja - przeksztalcenie obiektu javovego do jsona , deserializacja przeksztalcenie obiektu z jsona do obiektu javovego)
-// REST - zestaw dobrych praktyk do pisania aplikacjii webowych
-// zarówno put oraz update mogą służyc do tworzenia np. nowego klienta
-// PUT (create)- /serwis/customers/customerId
-// POST (create) - /serwis/customers{customerid:"5"}
-// alternatuwa dla postmana curl -  curl --header "Content-Type: application/json" --request POST --data '{"customerId":5}' http://localhost:8080/serwis/customers

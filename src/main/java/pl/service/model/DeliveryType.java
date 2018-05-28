@@ -9,18 +9,18 @@ public class DeliveryType {
     @Id
     @GeneratedValue
     @Column(name = "Delivery_typeID")
-    private Integer delivetyTypeId;
+    private Integer deliveryTypeId;
 
     @Column(name = "Delivery")
     private String deliveryType;
 
-    public Integer getDelivetyTypeId() {
+    public Integer getDeliveryTypeId() {
 
-        return delivetyTypeId;
+        return deliveryTypeId;
     }
 
-    public void setDelivetyTypeId(Integer delivetyTypeId) {
-        this.delivetyTypeId = delivetyTypeId;
+    public void setDeliveryTypeId(Integer deliveryTypeId) {
+        this.deliveryTypeId = deliveryTypeId;
     }
 
     public String getDeliveryType() {
@@ -31,11 +31,16 @@ public class DeliveryType {
         this.deliveryType = deliveryType;
     }
 
-    public DeliveryType(Integer delivetyTypeId, String deliveryType) {
-        this.delivetyTypeId = delivetyTypeId;
-        this.deliveryType = deliveryType;
+    public DeliveryType(Integer delivery_TypeId, String delivery_Type) {
+        this.deliveryTypeId = delivery_TypeId;
+        this.deliveryType = delivery_Type;
     }
 
     public DeliveryType() {
+    }
+
+    @Override
+    public String toString() {
+        return "Id typu naprawy: " + deliveryTypeId + " Typ naprawy: " + deliveryType;
     }
 }

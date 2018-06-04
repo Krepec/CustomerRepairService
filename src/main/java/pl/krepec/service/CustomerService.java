@@ -49,13 +49,6 @@ public class CustomerService {
         return customerDTOList;
     }
 
-    private void getCustomerDTO(List<CustomerDTO> customerDTOList, Iterable<Customer> customerList) {
-        for (Customer customer : customerList) {
-            CustomerDTO customerDTO = mapCustomer(customer);
-            customerDTOList.add(customerDTO);
-        }
-    }
-
     public Iterable<CustomerDTO> findByNameAndSurname(String name, String surname) {
         List<CustomerDTO> customerDTOList = new ArrayList<CustomerDTO>();
 
@@ -102,6 +95,13 @@ public class CustomerService {
                 customerDTO.getEmail()));
 
         return customer.getCustomerId();
+    }
+
+    private void getCustomerDTO(List<CustomerDTO> customerDTOList, Iterable<Customer> customerList) {
+        for (Customer customer : customerList) {
+            CustomerDTO customerDTO = mapCustomer(customer);
+            customerDTOList.add(customerDTO);
+        }
     }
 }
 

@@ -50,11 +50,9 @@ public class CustomerController {
     }
 
 
-    //    @PostMapping
-    @RequestMapping(value="/customers", method = RequestMethod.POST, consumes = "application/json")
+    @PostMapping(value="/customers", consumes = "application/json")
     public Long addCustomer(@RequestBody CustomerDTO customerDTO){
-      Long customerId = customerService.addNewCustomer(customerDTO);
-        return customerId;
+        return customerService.addNewCustomer(customerDTO);
     }
 }
 

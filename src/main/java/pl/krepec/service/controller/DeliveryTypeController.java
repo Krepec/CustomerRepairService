@@ -2,24 +2,24 @@ package pl.krepec.service.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import pl.krepec.service.repository.model.DeliveryType;
-import pl.krepec.service.repository.DeliveryTypeRepository;
+import pl.krepec.service.DeliveryTypeService;
+import pl.krepec.service.model.DeliveryTypeDTO;
 
 @RestController
 @RequestMapping("/delivery")
 public class DeliveryTypeController {
 
     @Autowired
-    private DeliveryTypeRepository deliveryTypeRepository;
+    private DeliveryTypeService deliveryTypeService;
 
     @GetMapping("/all")
-    public String getAllDeliveryType() {
-        return String.valueOf(deliveryTypeRepository.findAll());
+    public Iterable<DeliveryTypeDTO> getAllDeliveryTypes() {
+        return deliveryTypeService.getAllDeliteryTypes();
     }
 
     @PostMapping(value = "deliverytypes", consumes = "application/json")
-    public String addDeliveryType(@RequestBody DeliveryType deliveryType) {
-        return String.valueOf(deliveryTypeRepository.save(new DeliveryType(deliveryType.getDeliveryTypeId(), deliveryType.getDeliveryType())));
+    public Integer addDeliveryType(@RequestBody DeliveryTypeDTO deliveryTypeDTO) {
+        return deliveryTypeService.addNewDelivertyType(deliveryTypeDTO);
     }
 
 }

@@ -12,7 +12,7 @@ public class DeliveryTypeController {
     @Autowired
     private DeliveryTypeService deliveryTypeService;
 
-    @GetMapping("/all")
+    @GetMapping("/deliverytypes")
     public Iterable<DeliveryTypeDTO> getAllDeliveryTypes() {
         return deliveryTypeService.getAllDeliteryTypes();
     }

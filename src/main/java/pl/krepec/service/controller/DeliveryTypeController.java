@@ -6,7 +6,7 @@ import pl.krepec.service.DeliveryTypeService;
 import pl.krepec.service.model.DeliveryTypeDTO;
 
 @RestController
-@RequestMapping("/delivery")
+@RequestMapping("/service")
 public class DeliveryTypeController {
 
     @Autowired

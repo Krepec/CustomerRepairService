@@ -1,0 +1,88 @@
+[33mcommit 6447e4a9e69b37b905e64524b074c6d6cce95675[m
+Author: Krzysztof Repec <repeckrzysztof@gmail.com>
+Date:   Sat Jun 9 13:28:45 2018 +0200
+
+    Repair method findBySerialNumber in DeviceService class
+
+[33mcommit f87051f13c1349481eeb306c6bd481188a48f1e3[m
+Author: Krzysztof Repec <repeckrzysztof@gmail.com>
+Date:   Sat Jun 9 13:24:21 2018 +0200
+
+    Add DeviceDTO and DeviceService class
+
+[33mcommit 5d88d9c9dd7ff3848bd6886105fe2257fa7d847e[m
+Author: Krzysztof Repec <repeckrzysztof@gmail.com>
+Date:   Thu Jun 7 09:22:08 2018 +0200
+
+    Change names according to REST best practices
+
+[33mcommit 8653e0f2402725584a41568cef7998ca692ffbed[m
+Author: Krzysztof Repec <repeckrzysztof@gmail.com>
+Date:   Mon Jun 4 09:38:33 2018 +0200
+
+    Add DeliteryTypeDTO and DeliveryService class
+
+[33mcommit 67acde9805321f626b3854601779cf94ac27bd52[m
+Author: Krzysztof Repec <repeckrzysztof@gmail.com>
+Date:   Mon Jun 4 00:22:03 2018 +0200
+
+    Add CustomerService and CustomerDTO classe's
+    Change structure project to MVC
+
+[33mcommit f560323fc4348b342a4551aae38da101a8941a63[m
+Author: Krzysztof Repec <repeckrzysztof@gmail.com>
+Date:   Mon May 28 23:12:18 2018 +0200
+
+    Add GetMapping & PostMapping methods in DeliveryTypeController
+
+[33mcommit dee5c01a751560ffaa234980b2e30f0e566ee372[m
+Author: Krzysztof Repec <repeckrzysztof@gmail.com>
+Date:   Thu May 17 08:49:46 2018 +0200
+
+    6 commit
+
+[33mcommit b372d26fbeaa584891926bf21cdfd29df862b5e6[m
+Author: Krzysztof Repec <repeckrzysztof@gmail.com>
+Date:   Wed Apr 25 09:31:20 2018 +0200
+
+    Commit 5
+    
+    Add @GetMapping methods in CustomerControllr class
+    - findByName
+    - findByNameAndSurname
+    - findByPhoneNumber1
+    - findByPhoneNumber2
+
+[33mcommit c346aa47fa2bdefc0ad93b95b1e2ecfd4ec8492f[m
+Author: Krzysztof Repec <repeckrzysztof@gmail.com>
+Date:   Tue Apr 10 22:55:26 2018 +0200
+
+    4 Commit
+    Add some GetMappin methods
+
+[33mcommit bbf409d46b642a5ddd47141841f266d435df063d[m
+Author: Krzysztof Repec <repeckrzysztof@gmail.com>
+Date:   Fri Apr 6 00:26:31 2018 +0200
+
+    3 commit
+    Add class CustomerController
+
+[33mcommit 5a79f55e1d8fd65b95c4a71aae8683a7189646be[m
+Author: Krzysztof Repec <repeckrzysztof@gmail.com>
+Date:   Thu Mar 29 00:30:29 2018 +0200
+
+    2 commit
+    
+    Add class Parts, PartsType, RepairType
+    - add setters and getters, constructors
+    
+    Add for all classes Repositories who extends CrudRepository
+
+[33mcommit ff62b41947da88335ea1f626a53e291f77363231[m
+Author: Krzysztof Repec <repeckrzysztof@gmail.com>
+Date:   Mon Mar 26 23:12:59 2018 +0200
+
+    1 commit
+    
+    Create class Customer, Device, Repair, DeliveryType, Status and Technician
+    - create setters, getters and constructors to Spring Data JPA

@@ -2,8 +2,8 @@ package pl.krepec.service.repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-import pl.krepec.service.repository.model.Parts;
+import pl.krepec.service.repository.model.PartType;
 
 @Repository
-public interface PartsRepository extends CrudRepository<Parts, Long> {
+public interface PartTypeRepository extends CrudRepository<PartType, Long> {
 }

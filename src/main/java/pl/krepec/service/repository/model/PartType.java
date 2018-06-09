@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "parts_type")
-public class PartsType {
+public class PartType {
 
     @Id
     @GeneratedValue
@@ -30,11 +30,11 @@ public class PartsType {
         this.type = type;
     }
 
-    public PartsType(Integer partTypeId, String type) {
+    public PartType(Integer partTypeId, String type) {
         this.partTypeId = partTypeId;
         this.type = type;
     }
 
-    public PartsType() {
+    public PartType() {
     }
 }

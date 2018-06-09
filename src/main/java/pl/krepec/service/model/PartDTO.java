@@ -1,33 +1,13 @@
-package pl.krepec.service.repository.model;
+package pl.krepec.service.model;
 
-import javax.persistence.*;
+public class PartDTO {
 
-@Entity
-@Table(name = "parts")
-public class Parts {
 
-    @Id
-    @GeneratedValue
-    @Column(name = "RepairID")
-    private Integer repairId;
-
-    @Column(name = "Part_typeID")
     private Integer partTypeId;
 
-    @Column(name = "Part_name")
     private String partName;
 
-    @Column(name = "Price")
     private Double price;
-
-    public void setRepairId(Integer repairId) {
-        this.repairId = repairId;
-    }
-
-    public Integer getRepairId() {
-        return repairId;
-    }
-
 
     public Integer getPartTypeId() {
         return partTypeId;
@@ -53,15 +33,12 @@ public class Parts {
         this.price = price;
     }
 
-    public Parts(Integer repairId, Integer partTypeId, String partTypeName, Double price) {
-        this.repairId = repairId;
+    public PartDTO(Integer partTypeId, String partTypeName, Double price) {
         this.partTypeId = partTypeId;
         this.partName = partTypeName;
         this.price = price;
     }
 
-    public Parts() {
+    public PartDTO() {
     }
 }
-
-

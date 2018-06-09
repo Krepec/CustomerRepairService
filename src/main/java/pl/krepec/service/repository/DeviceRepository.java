@@ -10,8 +10,8 @@ import java.util.List;
 public interface DeviceRepository extends CrudRepository<Device, Long>{
 
     List<Device> findBySerialNumber(String serialNumber);
-    List<Device> findByImei(String imei);
-    List<Device> findByMark(String mark);
+    List<Device> findByImei(Long imei);
     List<Device> findByModel(String model);
+    List<Device> findByMark(String mark);
 
 }

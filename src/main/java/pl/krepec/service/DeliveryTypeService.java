@@ -2,10 +2,13 @@ package pl.krepec.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pl.krepec.service.model.DeliveryTypeDTO;
+import pl.krepec.service.dto.CustomerDTO;
+import pl.krepec.service.dto.DeliveryTypeDTO;
 import pl.krepec.service.repository.DeliveryTypeRepository;
+import pl.krepec.service.repository.model.Customer;
 import pl.krepec.service.repository.model.DeliveryType;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +23,10 @@ public class DeliveryTypeService {
         return new DeliveryTypeDTO(deliveryType.getDeliveryTypeId(),deliveryType.getDeliveryType());
     }
 
+    public DeliveryTypeDTO findById(Long deliveryTypeId){
+        DeliveryType deliveryType = deliveryTypeRepository.findOne(deliveryTypeId);
+        return mapDeliveryType(deliveryType);
+    }
 
     public Iterable<DeliveryTypeDTO> getAllDeliteryTypes(){
         List<DeliveryTypeDTO> deliveryTypeDTOList = new ArrayList<DeliveryTypeDTO>();
@@ -34,7 +41,7 @@ public class DeliveryTypeService {
 
     }
 
-    public Integer addNewDelivertyType(DeliveryTypeDTO deliveryTypeDTO){
+    public Long addNewDelivertyType(DeliveryTypeDTO deliveryTypeDTO){
         DeliveryType deliveryType = deliveryTypeRepository.save(new DeliveryType(deliveryTypeDTO.getDeliveryTypeId(),deliveryTypeDTO.getDeliveryType()));
         return deliveryType.getDeliveryTypeId();
     }

@@ -2,7 +2,8 @@ package pl.krepec.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pl.krepec.service.model.CustomerDTO;
+import org.springframework.web.bind.annotation.RequestMapping;
+import pl.krepec.service.dto.CustomerDTO;
 import pl.krepec.service.repository.CustomerRepository;
 import pl.krepec.service.repository.model.Customer;
 
@@ -15,6 +16,22 @@ public class CustomerService {
     @Autowired
     private CustomerRepository customerRepository;
 
+    public Iterable<CustomerDTO> find(String name, String surname, String phoneNumber1, String phoneNumber2, String city) {
+        if (name != null && surname != null) {
+            return findByNameAndSurname(name, surname);
+        } else if (name != null) {
+            return findByName(name);
+        } else if (phoneNumber1 != null) {
+            return findByPhoneNumber1(phoneNumber1);
+        } else if (phoneNumber2 != null) {
+            return findByPhoneNumber2(phoneNumber2);
+        } else if (city != null) {
+            return findByPhoneNumber2(city);
+        } else {
+            return getAllCustomers();
+        }
+    }
+
     private CustomerDTO mapCustomer(Customer customer) {
 
         return new CustomerDTO(customer.getCustomerId(), customer.getName(), customer.getSurname(),
@@ -22,7 +39,7 @@ public class CustomerService {
                 customer.getCity(), customer.getPostalCode(), customer.getCity(), customer.getEmail());
     }
 
-    public Iterable<CustomerDTO> getAllCustomers() {
+    private Iterable<CustomerDTO> getAllCustomers() {
         List<CustomerDTO> customerDTOList = new ArrayList<CustomerDTO>();
 
         Iterable<Customer> customerList = customerRepository.findAll();
@@ -40,7 +57,7 @@ public class CustomerService {
         return customerDTO;
     }
 
-    public Iterable<CustomerDTO> findByName(String name) {
+    private Iterable<CustomerDTO> findByName(String name) {
         List<CustomerDTO> customerDTOList = new ArrayList<CustomerDTO>();
 
         Iterable<Customer> customerList = customerRepository.findByName(name);
@@ -49,7 +66,7 @@ public class CustomerService {
         return customerDTOList;
     }
 
-    public Iterable<CustomerDTO> findByNameAndSurname(String name, String surname) {
+    private Iterable<CustomerDTO> findByNameAndSurname(String name, String surname) {
         List<CustomerDTO> customerDTOList = new ArrayList<CustomerDTO>();
 
         Iterable<Customer> customerList = customerRepository.findByNameAndSurname(name, surname);
@@ -58,7 +75,7 @@ public class CustomerService {
         return customerDTOList;
     }
 
-    public Iterable<CustomerDTO> findByPhoneNumber1(String phoneNumber1) {
+    private Iterable<CustomerDTO> findByPhoneNumber1(String phoneNumber1) {
         List<CustomerDTO> customerDTOList = new ArrayList<CustomerDTO>();
 
         Iterable<Customer> customerList = customerRepository.findByPhoneNumber1(phoneNumber1);
@@ -68,7 +85,7 @@ public class CustomerService {
 
     }
 
-    public Iterable<CustomerDTO> findByPhoneNumber2(String phoneNumber2) {
+    private Iterable<CustomerDTO> findByPhoneNumber2(String phoneNumber2) {
         List<CustomerDTO> customerDTOList = new ArrayList<CustomerDTO>();
 
         Iterable<Customer> customerList = customerRepository.findByPhoneNumber2(phoneNumber2);
@@ -103,6 +120,8 @@ public class CustomerService {
             customerDTOList.add(customerDTO);
         }
     }
+
+
 }
 
 

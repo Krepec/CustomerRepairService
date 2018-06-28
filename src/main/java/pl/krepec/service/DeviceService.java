@@ -2,7 +2,7 @@ package pl.krepec.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pl.krepec.service.model.DeviceDTO;
+import pl.krepec.service.dto.DeviceDTO;
 import pl.krepec.service.repository.DeviceRepository;
 import pl.krepec.service.repository.model.Device;
 

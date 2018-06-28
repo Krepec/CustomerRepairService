@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="CustomerRepairService" />
         <module name="CustomerRepairServicee" />
+        <module name="customerrepairserviceee" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="CustomerRepairService" target="1.6" />
       <module name="CustomerRepairServicee" target="1.6" />
+      <module name="customerrepairserviceee" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,18 +1,18 @@
-package pl.krepec.service.model;
+package pl.krepec.service.dto;
 
 
 public class DeliveryTypeDTO {
 
-    private Integer deliveryTypeId;
+    private Long deliveryTypeId;
 
     private String deliveryType;
 
-    public Integer getDeliveryTypeId() {
+    public Long getDeliveryTypeId() {
 
         return deliveryTypeId;
     }
 
-    public void setDeliveryTypeId(Integer deliveryTypeId) {
+    public void setDeliveryTypeId(Long deliveryTypeId) {
         this.deliveryTypeId = deliveryTypeId;
     }
 
@@ -24,7 +24,7 @@ public class DeliveryTypeDTO {
         this.deliveryType = deliveryType;
     }
 
-    public DeliveryTypeDTO(Integer delivery_TypeId, String delivery_Type) {
+    public DeliveryTypeDTO(Long delivery_TypeId, String delivery_Type) {
         this.deliveryTypeId = delivery_TypeId;
         this.deliveryType = delivery_Type;
     }

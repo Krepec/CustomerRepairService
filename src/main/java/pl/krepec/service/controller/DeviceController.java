@@ -3,10 +3,10 @@ package pl.krepec.service.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pl.krepec.service.DeviceService;
-import pl.krepec.service.model.DeviceDTO;
+import pl.krepec.service.dto.DeviceDTO;
 
 @RestController
-@RequestMapping("/service")
+@RequestMapping("/devices")
 public class DeviceController {
 
     @Autowired

@@ -9,17 +9,17 @@ public class DeliveryType {
     @Id
     @GeneratedValue
     @Column(name = "Delivery_typeID")
-    private Integer deliveryTypeId;
+    private Long deliveryTypeId;
 
     @Column(name = "Delivery")
     private String deliveryType;
 
-    public Integer getDeliveryTypeId() {
+    public Long getDeliveryTypeId() {
 
         return deliveryTypeId;
     }
 
-    public void setDeliveryTypeId(Integer deliveryTypeId) {
+    public void setDeliveryTypeId(Long deliveryTypeId) {
         this.deliveryTypeId = deliveryTypeId;
     }
 
@@ -31,7 +31,7 @@ public class DeliveryType {
         this.deliveryType = deliveryType;
     }
 
-    public DeliveryType(Integer delivery_TypeId, String delivery_Type) {
+    public DeliveryType(Long delivery_TypeId, String delivery_Type) {
         this.deliveryTypeId = delivery_TypeId;
         this.deliveryType = delivery_Type;
     }

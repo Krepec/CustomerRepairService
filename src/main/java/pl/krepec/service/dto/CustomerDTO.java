@@ -1,4 +1,4 @@
-package pl.krepec.service.model;
+package pl.krepec.service.dto;
 
 public class CustomerDTO {
 

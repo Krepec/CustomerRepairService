@@ -3,10 +3,10 @@ package pl.krepec.service.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pl.krepec.service.PartService;
-import pl.krepec.service.model.PartDTO;
+import pl.krepec.service.dto.PartDTO;
 
 @RestController
-@RequestMapping("/service")
+@RequestMapping("/parts")
 public class PartController {
 
     @Autowired

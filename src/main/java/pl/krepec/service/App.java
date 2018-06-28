@@ -17,5 +17,12 @@ public class App {
         , Device.class, DeviceRepository.class, Part.class, PartRepository.class, PartType.class, PartTypeRepository.class, Repair.class,RepairRepository.class,
                 RepairType.class, RepairTypeRepository.class, Status.class, StatusRepository.class,Technician.class,TechnicianRepository.class},args);
 
+
+
+      /*  CustomerService customerService = new CustomerService();
+        System.out.println(customerService.getCustomerByName());*/
     }
+
+
+
 }

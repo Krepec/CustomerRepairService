@@ -12,12 +12,28 @@ public class DeviceController {
     @Autowired
     private DeviceService deviceService;
 
-
     @GetMapping("/devices")
-    public Iterable<DeviceDTO> findAllDevices() {
-        return deviceService.findAllDevices();
+    public Iterable<DeviceDTO> find(@RequestParam(required = false, value = "serialnumber") String serialNumer,
+                                    @RequestParam(required = false, value = "imei") Long imei,
+                                    @RequestParam(required = false, value = "model") String model,
+                                    @RequestParam(required = false, value = "mark") String mark) {
+        return deviceService.find(serialNumer, imei, model, mark);
     }
 
+    @PostMapping(value = "/devices", consumes = "application/json")
+    public Integer addDevice(@RequestBody DeviceDTO deviceDTO) {
+        return deviceService.addNewDevice(deviceDTO);
+    }
+
+}
+
+  // METHOD USED BEFORE REFACTORING
+
+
+  /*  @GetMapping("/devices")
+    public Iterable<DeviceDTO> findAllDevices() {
+        return deviceService.getAllDevices();
+    }
 
     @GetMapping("/findbysn")
     public Iterable<DeviceDTO> findBySerialNumber(@RequestParam String serialNumber) {
@@ -37,11 +53,6 @@ public class DeviceController {
     @GetMapping("/findbymark")
     public Iterable<DeviceDTO> findByMark(@RequestParam String mark) {
         return deviceService.findByMark(mark);
-    }
+    }*/
 
-    @PostMapping(value = "/devices", consumes = "application/json")
-    public Integer addDevice(@RequestBody DeviceDTO deviceDTO) {
-        return deviceService.addNewDevice(deviceDTO);
-    }
 
-}

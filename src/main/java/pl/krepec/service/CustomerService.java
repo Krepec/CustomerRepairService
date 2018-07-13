@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pl.krepec.service.dto.CustomerDTO;
+import pl.krepec.service.repository.CustomerCriteriaRepository;
 import pl.krepec.service.repository.CustomerRepository;
 import pl.krepec.service.repository.model.Customer;
 
@@ -15,6 +16,9 @@ public class CustomerService {
 
     @Autowired
     private CustomerRepository customerRepository;
+    @Autowired
+    private CustomerCriteriaRepository customerCriteriaRepository;
+
 
     public Iterable<CustomerDTO> find(String name, String surname, String phoneNumber1, String phoneNumber2, String city) {
         if (name != null && surname != null) {
@@ -60,7 +64,7 @@ public class CustomerService {
     private Iterable<CustomerDTO> findByName(String name) {
         List<CustomerDTO> customerDTOList = new ArrayList<CustomerDTO>();
 
-        Iterable<Customer> customerList = customerRepository.findByName(name);
+        Iterable<Customer> customerList = customerCriteriaRepository.findByName(name);
         getCustomerDTO(customerDTOList, customerList);
 
         return customerDTOList;

@@ -17,8 +17,8 @@ public class PartController {
         return partService.getAllParts();
     }
 
-    @GetMapping("/findbypartname")
-    public Iterable<PartDTO> findByPartName(String partName) {
+    @GetMapping("/parts/")
+    public Iterable<PartDTO> findByPartName(@RequestParam ("partname") String partName) {
         return partService.getByPartName(partName);
     }
 

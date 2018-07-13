@@ -1,51 +1,32 @@
-package pl.krepec.service.repository.model;
+package pl.krepec.service.dto;
 
-import javax.persistence.*;
 import java.util.Date;
 
-@Entity
-@Table(name = "repairs")
-public class Repair {
-
-    @Id
-    @GeneratedValue
-    @Column(name = "RepairID")
+public class RepairDTO {
     private Integer repairId;
 
-    @Column(name = "DeviceID")
     private Integer deviceId;
 
-    @Column(name = "CustomerID")
     private Integer customerId;
 
-    @Column(name = "TechnicianID")
     private Integer technicianId;
 
-    @Column(name = "PartID")
     private Integer partId;
 
-    @Column(name = "StatusID")
     private Integer statusId;
 
-    @Column(name = "Repair_typeID")
     private Integer repairTypeId;
 
-    @Column(name = "Delivery_typeID")
     private Integer deliveryTypeId;
 
-    @Column(name = "Start_date")
     private Date startDate;
 
-    @Column(name = "End_date")
     private Date endDate;
 
-    @Column(name = "Purchase_date")
     private Date purchaseDate;
 
-    @Column(name = "Issue_describe")
     private String issueDescribe;
 
-    @Column(name = "Comments")
     private String comments;
 
 
@@ -153,7 +134,7 @@ public class Repair {
         return issueDescribe;
     }
 
-    public Repair(Integer repairId, Integer deviceId, Integer customerId, Integer technicianId, Integer partId, Integer statusId,
+    public RepairDTO(Integer repairId, Integer deviceId, Integer customerId, Integer technicianId, Integer partId, Integer statusId,
                   Integer repairTypeId, Integer deliveryTypeId, Date startDate, Date endDate, Date purchaseDate, String issueDescribe, String comments) {
 
         this.repairId = repairId;
@@ -172,8 +153,6 @@ public class Repair {
 
     }
 
-    public Repair() {
 
-    }
 
 }

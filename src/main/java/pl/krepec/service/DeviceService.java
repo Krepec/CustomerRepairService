@@ -23,7 +23,22 @@ public class DeviceService {
         return deviceDTO;
     }
 
-    public Iterable<DeviceDTO> findAllDevices() {
+    public Iterable<DeviceDTO> find(String serialNumber, Long imei, String model, String mark) {
+
+        if (serialNumber != null) {
+            return findBySerialNumber(serialNumber);
+        } else if (imei != null) {
+            return findByImei(imei);
+        } else if (model != null) {
+            return findByModel(model);
+        } else if (mark != null) {
+            return findByMark(mark);
+        }
+        return getAllDevices();
+    }
+
+
+    public Iterable<DeviceDTO> getAllDevices() {
         List<DeviceDTO> deviceDTOlist = new ArrayList<DeviceDTO>();
         Iterable<Device> deviceList = deviceRepository.findAll();
 

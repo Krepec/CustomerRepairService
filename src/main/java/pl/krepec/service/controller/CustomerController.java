@@ -18,7 +18,7 @@ public class CustomerController {
     private CustomerService customerService;
 
 
-    @GetMapping("/customers/{Id}")
+    @GetMapping("/{Id}")
     public CustomerDTO findById(@PathVariable("Id") Long customerId) {
         return customerService.fingById(customerId);
 

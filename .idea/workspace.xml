@@ -2,25 +2,81 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f7430d0-e495-4580-af29-4baeca4f5033" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/krepec/service/RepairService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/krepec/service/dto/RepairDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/CustomerCriteriaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/krepec/service/StatusService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/krepec/service/TechnicianService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/StatusController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/TechnicianController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/krepec/service/dto/StatusDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/krepec/service/dto/TechnicianDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/krepec/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/krepec/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/krepec/service/DeliveryTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/krepec/service/DeliveryTypeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/krepec/service/DeviceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/krepec/service/DeviceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/krepec/service/PartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/krepec/service/PartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/krepec/service/RepairService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/krepec/service/RepairService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/CustomerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/DeliveryTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/DeliveryTypeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/DeviceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/DeviceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/PartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/PartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Repair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Repair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/krepec/service/CustomerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/DeviceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/krepec/service/DeviceService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/krepec/service/controller/CustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/controller/DeliveryTypeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/krepec/service/controller/DeliveryTypeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/controller/DeviceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/krepec/service/controller/DeviceController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/controller/PartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/krepec/service/controller/PartController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/model/Repair.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/model/Repair.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/RepairController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/RepairController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/CustomerCriteriaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/CustomerCriteriaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/RepairRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/RepairRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Calendar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/CustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/DeliveryTypeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/DeviceService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/PartService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/RepairService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/controller/CustomerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/controller/DeliveryTypeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/controller/DeviceController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/controller/PartController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/dto/CustomerDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/dto/DeliveryTypeDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/dto/DeviceDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/dto/PartDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/dto/RepairDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/CustomerCriteriaRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/CustomerRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/DeliveryTypeRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/DeviceRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/PartRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/PartTypeRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/RepairRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/RepairTypeRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/StatusRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/TechnicianRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/model/Calendar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/model/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/model/Customer_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/model/DeliveryType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/model/DeliveryType_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/model/Device.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/model/Device_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/model/Part.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/model/PartType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/model/PartType_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/model/Part_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/model/Repair.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/model/RepairType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/model/RepairType_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/model/Repair_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/model/Status.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/model/Status_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/model/Technician.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/model/Technician_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/pl/krepec/service/repository/model/Customer_.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/pl/krepec/service/repository/model/DeliveryType_.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/pl/krepec/service/repository/model/Device_.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/pl/krepec/service/repository/model/PartType_.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/pl/krepec/service/repository/model/Part_.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/pl/krepec/service/repository/model/RepairType_.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/pl/krepec/service/repository/model/Repair_.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/pl/krepec/service/repository/model/Status_.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/pl/krepec/service/repository/model/Technician_.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,11 +89,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CustomerService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/CustomerService.java">
+      <file leaf-file-name="StatusController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/StatusController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+            <state relative-caret-position="135">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#445#446#0" expanded="true" />
+                <element signature="e#498#499#0" expanded="true" />
+                <element signature="e#593#594#0" expanded="true" />
+                <element signature="e#629#630#0" expanded="true" />
+                <element signature="e#630#631#0" expanded="true" />
+                <element signature="e#690#691#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RepairController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/RepairController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,11 +119,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomerCriteriaRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/CustomerCriteriaRepository.java">
+      <file leaf-file-name="TechnicianController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/TechnicianController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="480">
+              <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#495#496#0" expanded="true" />
+                <element signature="e#534#535#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Integer.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/Downloads/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Integer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TechnicianService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/TechnicianService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="37" column="64" lean-forward="true" selection-start-line="37" selection-start-column="64" selection-end-line="37" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,17 +154,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RepairDTO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/dto/RepairDTO.java">
+      <file leaf-file-name="TechnicianDTO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/dto/TechnicianDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
-              <folding>
-                <element signature="e#1563#1564#0" expanded="true" />
-                <element signature="e#1611#1612#0" expanded="true" />
-                <element signature="e#2227#2228#0" expanded="true" />
-                <element signature="e#2284#2285#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="75">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -81,11 +172,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeviceDTO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/dto/DeviceDTO.java">
+      <file leaf-file-name="Technician.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Technician.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="255">
+              <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -93,51 +184,22 @@
       <file leaf-file-name="PartService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/PartService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+            <state relative-caret-position="473">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RepairService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/RepairService.java">
+      <file leaf-file-name="StatusService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/StatusService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="548">
+              <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="43" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#691#692#0" expanded="true" />
+                <element signature="e#769#770#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PartController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/PartController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Repair.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Repair.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="108" column="30" lean-forward="true" selection-start-line="108" selection-start-column="30" selection-end-line="108" selection-end-column="30" />
-              <folding>
-                <element signature="e#1563#1564#0" expanded="true" />
-                <element signature="e#1611#1612#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeviceController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/DeviceController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -173,15 +235,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/pl/service/model/Parts.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/service/model/Repair.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/service/model/RepairType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/App.java" />
-        <option value="$PROJECT_DIR$/src/main/java/App/App.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/service/model/DeliveryTypeRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/service/model/App.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/service/model/CustomerRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/service/model/CustomerId.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/service/model/Customer.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/service/model/CalendarRepair.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/service/model/Calendar.java" />
@@ -201,7 +254,6 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Parts.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/model/PartDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/PartRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/PartService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/CustomerSpecyfication.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/CustomerSpecification.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
@@ -210,20 +262,30 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/DeliveryTypeRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/dto/DeliveryTypeDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/DeliveryType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/DeliveryTypeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/DeliveryTypeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/CustomerController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/DeviceService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/DeviceController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/a" />
         <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/CustomerService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/CustomerCriteriaRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Customer.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Repair.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/PartController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/CustomerCriteriaRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/RepairRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/RepairService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/dto/RepairDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/dto/StatusDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/RepairController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/DeliveryTypeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/CustomerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/DeviceController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/PartController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/PartService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/DeliveryTypeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/DeviceService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/StatusRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/StatusService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/StatusController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/dto/TechnicianDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/TechnicianController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/TechnicianService.java" />
       </list>
     </option>
   </component>
@@ -314,25 +376,15 @@
               <item name="customerrepairserviceee" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="customerrepairserviceee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="customerrepairserviceee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -495,19 +547,17 @@
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49771988" weight="0.3281046" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5022801" side_tool="true" weight="0.34586465" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32941177" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49771988" visible="true" weight="0.34509805" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49771988" weight="0.34509805" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2935421" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19830398" />
       <window_info id="Learn" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -519,27 +569,29 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49771988" weight="0.3281046" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34586465" />
       <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17980456" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="4" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39918256" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.3283208" />
@@ -582,115 +634,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Calendar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/DeviceRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.39/mysql-connector-java-5.1.39.jar!/com/mysql/jdbc/SQLError.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1245">
-          <caret line="333" selection-start-line="333" selection-end-line="333" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Status.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/RepairType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/PartType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Part.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/PartRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.39/mysql-connector-java-5.1.39.jar!/com/mysql/jdbc/ConnectionImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59160">
-          <caret line="3944" selection-start-line="3944" selection-end-line="3944" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar!/javax/persistence/criteria/Predicate.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/customerrepairserviceee.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/1.11.9.RELEASE/spring-data-jpa-1.11.9.RELEASE.jar!/org/springframework/data/jpa/repository/JpaSpecificationExecutor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CustomerRepairService.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/CustomerSpecyfication.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/CustomerSpecification.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.13.RELEASE/spring-beans-4.3.13.RELEASE.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="357" selection-start-line="357" selection-end-line="357" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar!/javax/persistence/criteria/CriteriaBuilder.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -705,38 +648,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/DeliveryTypeRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/dto/DeliveryTypeDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/DeliveryType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/dto/CustomerDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/DeliveryTypeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="50" column="1" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -749,13 +664,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/la k;'asd .,a" />
     <entry file="file://$PROJECT_DIR$/a" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/DeviceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="103" column="71" lean-forward="true" selection-start-line="103" selection-start-column="71" selection-end-line="103" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Downloads/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Iterable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-240">
@@ -777,13 +685,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/pl/krepec/service/repository/CustomerRepository.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/pl/krepec/service/repository/CustomerRepository.class" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.13.9.RELEASE/spring-data-commons-1.13.9.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -791,41 +693,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/generated-sources/annotations/pl/krepec/service/repository/model/Customer_.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/annotations/pl/krepec/service/repository/model/Customer_.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar!/javax/persistence/metamodel/SingularAttribute.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/DeliveryTypeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/CustomerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/CustomerRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -838,39 +710,232 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/CustomerCriteriaRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="420">
+          <caret line="28" column="56" lean-forward="true" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/DeviceRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/PartTypeRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/TechnicianRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/dto/CustomerDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-876">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/RepairRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/CustomerRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="71" selection-start-column="71" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/dto/DeliveryTypeDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/jdk-10.0.1/lib/src.zip!/java.base/java/util/Date.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-744">
+          <caret line="132" column="13" selection-start-line="132" selection-start-column="13" selection-end-line="132" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/dto/RepairDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-840">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="e#1874#1875#0" expanded="true" />
+            <element signature="e#1916#1917#0" expanded="true" />
+            <element signature="e#1950#1951#0" expanded="true" />
+            <element signature="e#1982#1983#0" expanded="true" />
+            <element signature="e#2014#2015#0" expanded="true" />
+            <element signature="e#2044#2045#0" expanded="true" />
+            <element signature="e#2088#2089#0" expanded="true" />
+            <element signature="e#2126#2127#0" expanded="true" />
+            <element signature="e#2180#2181#0" expanded="true" />
+            <element signature="e#2228#2229#0" expanded="true" />
+            <element signature="e#2265#2266#0" expanded="true" />
+            <element signature="e#2300#2301#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/RepairTypeRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/DeliveryTypeRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Repair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="108" column="30" selection-start-line="108" selection-start-column="30" selection-end-line="108" selection-end-column="30" />
+          <folding>
+            <element signature="e#1563#1564#0" expanded="true" />
+            <element signature="e#1611#1612#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/RepairType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/dto/DeviceDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="90">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/DeliveryTypeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="e#692#693#0" expanded="true" />
+            <element signature="e#755#756#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/DeviceController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="420">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#457#458#0" expanded="true" />
+            <element signature="e#512#513#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/CustomerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="84" column="49" selection-start-line="84" selection-start-column="49" selection-end-line="84" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/DeliveryTypeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/DeviceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-330">
+          <caret line="53" column="59" lean-forward="true" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/RepairService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/PartController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        <state relative-caret-position="180">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/PartService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/StatusRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+        <state relative-caret-position="90">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/dto/StatusDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Status.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
@@ -881,44 +946,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/CustomerService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Technician.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+        <state relative-caret-position="255">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/PartService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/RepairController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Repair.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/dto/TechnicianDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="108" column="30" lean-forward="true" selection-start-line="108" selection-start-column="30" selection-end-line="108" selection-end-column="30" />
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/StatusController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
-            <element signature="e#1563#1564#0" expanded="true" />
-            <element signature="e#1611#1612#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#445#446#0" expanded="true" />
+            <element signature="e#498#499#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#629#630#0" expanded="true" />
+            <element signature="e#630#631#0" expanded="true" />
+            <element signature="e#690#691#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/dto/RepairDTO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/TechnicianController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
+        <state relative-caret-position="480">
+          <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
           <folding>
-            <element signature="e#1563#1564#0" expanded="true" />
-            <element signature="e#1611#1612#0" expanded="true" />
-            <element signature="e#2227#2228#0" expanded="true" />
-            <element signature="e#2284#2285#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#495#496#0" expanded="true" />
+            <element signature="e#534#535#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/RepairService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/StatusService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="548">
+          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="43" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#691#692#0" expanded="true" />
+            <element signature="e#769#770#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/TechnicianService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="64" lean-forward="true" selection-start-line="37" selection-start-column="64" selection-end-line="37" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

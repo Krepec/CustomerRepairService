@@ -12,6 +12,11 @@ public class DeviceController {
     @Autowired
     private DeviceService deviceService;
 
+    @GetMapping("/{Id}")
+    public DeviceDTO findById(@PathVariable("Id") Long deviceId) {
+        return deviceService.fingById(deviceId);
+    }
+
     @GetMapping("/devices")
     public Iterable<DeviceDTO> find(@RequestParam(required = false, value = "serialnumber") String serialNumer,
                                     @RequestParam(required = false, value = "imei") Long imei,

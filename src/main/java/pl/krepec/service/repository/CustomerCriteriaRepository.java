@@ -31,15 +31,10 @@ public class CustomerCriteriaRepository {
 
         return entityManager.createQuery(criteriaQuery).getResultList();
     }
-
-
-
-
-
 }
 
 
-// Criteria Api jest bardziej złozona od CrudRepository, Api jest bardziej skomplikowane ale jest jawnie pokazane co się dzieje w kodzie,
+// Criteria Api jest bardziej złozona i skomplikowana od CrudRepository,  przedstawia jawnie co się dzieje w kodzie,
 // natomiast w Crud dzieje sie "magia springa" która nie jest jawnie pokazana
 // - criteria api pozwala ma budowanie skomplikowanych zapytań
 // - crud pozwala tylko na tworzenie,czytanie, update, oraz kasowanie

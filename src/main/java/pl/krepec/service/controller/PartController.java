@@ -17,6 +17,11 @@ public class PartController {
         return partService.getAllParts();
     }
 
+    @GetMapping("/{Id}")
+    public PartDTO findById(@PathVariable("Id") Long partId) {
+        return partService.fingById(partId);
+    }
+
     @GetMapping("/parts/")
     public Iterable<PartDTO> findByPartName(@RequestParam ("partname") String partName) {
         return partService.getByPartName(partName);

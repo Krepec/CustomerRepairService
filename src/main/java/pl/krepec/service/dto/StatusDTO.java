@@ -1,19 +1,9 @@
-package pl.krepec.service.repository.model;
+package pl.krepec.service.dto;
 
-import javax.persistence.*;
+public class StatusDTO {
 
-@Entity
-@Table(name = "status")
-public class Status {
-
-    @Id
-    @GeneratedValue
-    @Column(name = "StatusID")
     private Integer statusId;
-
-    @Column(name = "StatusDTO")
     private String status;
-
 
     public Integer getStatusId() {
         return statusId;
@@ -31,11 +21,11 @@ public class Status {
         this.status = status;
     }
 
-    public Status(Integer statusId, String status) {
+    public StatusDTO(Integer statusId, String status) {
         this.statusId = statusId;
         this.status = status;
     }
 
-    public Status() {
+    public StatusDTO() {
     }
 }

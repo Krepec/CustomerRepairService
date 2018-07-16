@@ -12,7 +12,7 @@ public class DeliveryTypeController {
     @Autowired
     private DeliveryTypeService deliveryTypeService;
 
-    @GetMapping("/deliverytypes/{id}")
+    @GetMapping("/{id}")
     public DeliveryTypeDTO getDeliveryTypeById(@PathVariable("id") Long deliveryTypeId) {
        return deliveryTypeService.findById(deliveryTypeId);
     }

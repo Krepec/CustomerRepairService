@@ -33,6 +33,12 @@ public class PartService {
         return partDTOList;
     }
 
+    public PartDTO fingById(Long partId) {
+        Part part = partsRepository.findOne(partId);
+        PartDTO partDTO = mapPart(part);
+        return partDTO;
+    }
+
     public Iterable<PartDTO> getByPartName(String partName) {
         List<PartDTO> partDTOList = new ArrayList<PartDTO>();
         Iterable<Part> partList = partsRepository.findByPartName(partName);

@@ -18,34 +18,33 @@ public class DeliveryTypeService {
     @Autowired
     private DeliveryTypeRepository deliveryTypeRepository;
 
-    private DeliveryTypeDTO mapDeliveryType(DeliveryType deliveryType){
+    private DeliveryTypeDTO mapDeliveryType(DeliveryType deliveryType) {
 
-        return new DeliveryTypeDTO(deliveryType.getDeliveryTypeId(),deliveryType.getDeliveryType());
+        return new DeliveryTypeDTO(deliveryType.getDeliveryTypeId(), deliveryType.getDeliveryType());
     }
 
-    public DeliveryTypeDTO findById(Long deliveryTypeId){
+    public Iterable<DeliveryTypeDTO> getAllDeliteryTypes() {
+        List<DeliveryTypeDTO> deliveryTypeDTOList = new ArrayList<DeliveryTypeDTO>();
+        Iterable<DeliveryType> deliveryTypes = deliveryTypeRepository.findAll();
+
+        for (DeliveryType deliveryType : deliveryTypes) {
+            DeliveryTypeDTO deliveryTypeDTO = mapDeliveryType(deliveryType);
+            deliveryTypeDTOList.add(deliveryTypeDTO);
+        }
+        return deliveryTypeDTOList;
+    }
+
+    public DeliveryTypeDTO findById(Long deliveryTypeId) {
         DeliveryType deliveryType = deliveryTypeRepository.findOne(deliveryTypeId);
         return mapDeliveryType(deliveryType);
     }
 
-    public Iterable<DeliveryTypeDTO> getAllDeliteryTypes(){
-        List<DeliveryTypeDTO> deliveryTypeDTOList = new ArrayList<DeliveryTypeDTO>();
-        Iterable<DeliveryType> deliveryTypes = deliveryTypeRepository.findAll();
 
-        for (DeliveryType deliveryType : deliveryTypes){
-            DeliveryTypeDTO deliveryTypeDTO = mapDeliveryType(deliveryType);
-            deliveryTypeDTOList.add(deliveryTypeDTO);
-        }
 
-        return deliveryTypeDTOList;
-
-    }
-
-    public Long addNewDelivertyType(DeliveryTypeDTO deliveryTypeDTO){
-        DeliveryType deliveryType = deliveryTypeRepository.save(new DeliveryType(deliveryTypeDTO.getDeliveryTypeId(),deliveryTypeDTO.getDeliveryType()));
+    public Long addNewDelivertyType(DeliveryTypeDTO deliveryTypeDTO) {
+        DeliveryType deliveryType = deliveryTypeRepository.save(new DeliveryType(deliveryTypeDTO.getDeliveryTypeId(), deliveryTypeDTO.getDeliveryType()));
         return deliveryType.getDeliveryTypeId();
     }
-
 
 
 }

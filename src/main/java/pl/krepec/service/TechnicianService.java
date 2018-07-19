@@ -40,7 +40,7 @@ public class TechnicianService {
     }
 
     public Integer addNewTechnician(TechnicianDTO technicianDTO) {
-        Technician technician = technicianRepository.save(new Technician(technicianDTO.getTechnicianId(), technicianDTO.getSurname(), technicianDTO.getSurname()));
+        Technician technician = technicianRepository.save(new Technician(technicianDTO.getTechnicianId(), technicianDTO.getName(), technicianDTO.getSurname()));
         return technician.getTechnicianId();
     }
 }

@@ -2,7 +2,6 @@ package pl.krepec.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestMapping;
 import pl.krepec.service.dto.PartTypeDTO;
 import pl.krepec.service.repository.PartTypeRepository;
 import pl.krepec.service.repository.model.PartType;

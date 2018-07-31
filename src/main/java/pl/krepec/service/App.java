@@ -19,8 +19,7 @@ public class App {
 
 
 
-      /*  CustomerService customerService = new CustomerService();
-        System.out.println(customerService.getCustomerByName());*/
+
     }
 
 

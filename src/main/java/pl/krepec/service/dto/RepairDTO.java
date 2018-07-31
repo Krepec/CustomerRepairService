@@ -1,5 +1,7 @@
 package pl.krepec.service.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 public class RepairDTO {
@@ -19,10 +21,13 @@ public class RepairDTO {
 
     private Integer deliveryTypeId;
 
+    @JsonFormat(pattern="d  d.MM.yyyy")
     private Date startDate;
 
+    @JsonFormat(pattern="dd.MM.yyyy")
     private Date endDate;
 
+    @JsonFormat(pattern="dd.MM.yyyy")
     private Date purchaseDate;
 
     private String issueDescribe;
@@ -134,8 +139,11 @@ public class RepairDTO {
         return issueDescribe;
     }
 
+    public RepairDTO() {
+    }
+
     public RepairDTO(Integer repairId, Integer deviceId, Integer customerId, Integer technicianId, Integer partId, Integer statusId,
-                  Integer repairTypeId, Integer deliveryTypeId, Date startDate, Date endDate, Date purchaseDate, String issueDescribe, String comments) {
+                     Integer repairTypeId, Integer deliveryTypeId, Date startDate, Date endDate, Date purchaseDate, String issueDescribe, String comments) {
 
         this.repairId = repairId;
         this.deviceId = deviceId;

@@ -1,7 +1,13 @@
 package pl.krepec.service.repository.model;
 
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
+
 import javax.persistence.*;
+import javax.persistence.criteria.ListJoin;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "repairs")
@@ -48,6 +54,11 @@ public class Repair {
     @Column(name = "Comments")
     private String comments;
 
+
+    @NotFound(action = NotFoundAction.IGNORE)
+    @ManyToOne
+    @JoinColumn(name="customerid",insertable = false, updatable = false)
+    private Customer customer;
 
     public void setRepairId(Integer repairId) {
         this.repairId = repairId;

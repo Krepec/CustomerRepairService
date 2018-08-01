@@ -6,22 +6,24 @@ import pl.krepec.service.RepairService;
 import pl.krepec.service.dto.RepairDTO;
 import pl.krepec.service.repository.model.Repair;
 
+import java.util.InputMismatchException;
 import java.util.List;
 
 @RestController
 @RequestMapping("/repairs")
-public class RepairController {
+public class
+RepairController {
 
     @Autowired
     private RepairService repairService;
 
     @RequestMapping("/repairs")
-    public List<RepairDTO> getAllRepairs(){
+    public List<RepairDTO> getAllRepairs() {
         return repairService.getAllRepairs();
     }
 
     @PostMapping(value = "/repairs", consumes = "application/json")
-    public Integer addNewRepair(@RequestBody RepairDTO repairDTO){
+    public Integer addNewRepair(@RequestBody RepairDTO repairDTO) {
         return repairService.addNewRepair(repairDTO);
     }
 
@@ -31,18 +33,43 @@ public class RepairController {
     }
 
 
-    @RequestMapping("/id/{customerId}")
-    public List<Repair> findCustomerRepairs(@PathVariable("customerId") Integer customerId) {
-        return repairService.findCustomerRepairs(customerId);
+    @RequestMapping("/customer/")
+    public List<Repair> findRepairsByCustomerInfo
+            (@RequestParam(required = false, value = "customerid") Integer customerId,
+             @RequestParam(required = false, value = "name") String name,
+             @RequestParam(required = false, value = "surname") String surname,
+             @RequestParam(required = false, value = "phone") String phoneNumber1,
+             @RequestParam(required = false, value = "email") String email) throws InputMismatchException {
+
+        return repairService.findRepairsByCustomerInfo(customerId, name, surname, phoneNumber1, email);
     }
 
-    @RequestMapping("/phone/{phone}")
-    public List<Repair> findCustomerRepairs(@PathVariable("phone") String phoneNumber) {
-        return repairService.findRepairsByCustomerPhoneNumber(phoneNumber);
+    @RequestMapping("/device/")
+    public List<Repair> findRepairsByDeviceInfo
+            (@RequestParam(required = false, value = "deviceId") Integer deviceId,
+             @RequestParam(required = false, value = "imei") String imei,
+             @RequestParam(required = false, value = "serialnumber") String serialNumber) throws InputMismatchException {
+
+        return repairService.findRepairsByDeviceInfo(deviceId, imei, serialNumber);
     }
-
-
-
 
 }
 
+
+
+
+
+
+
+
+
+
+/* @RequestMapping("/id/{customerId}")
+     public List<Repair> findCustomerRepairs(@PathVariable("customerId") Integer customerId) {
+         return repairService.findCustomerRepairs(customerId);
+     }
+
+     @RequestMapping("/phone/{phone}")
+     public List<Repair> findCustomerRepairs(@PathVariable("phone") String phoneNumber) {
+         return repairService.findRepairsByCustomerPhoneNumber(phoneNumber);
+     }*/

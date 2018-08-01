@@ -20,6 +20,7 @@ public abstract class Repair_ {
 	public static volatile SingularAttribute<Repair, Integer> statusId;
 	public static volatile SingularAttribute<Repair, Integer> customerId;
 	public static volatile SingularAttribute<Repair, Integer> technicianId;
+	public static volatile SingularAttribute<Repair, Device> device;
 	public static volatile SingularAttribute<Repair, Integer> repairTypeId;
 	public static volatile SingularAttribute<Repair, Date> startDate;
 	public static volatile SingularAttribute<Repair, Customer> customer;

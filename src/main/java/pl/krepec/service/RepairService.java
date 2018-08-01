@@ -8,6 +8,7 @@ import pl.krepec.service.repository.RepairRepository;
 import pl.krepec.service.repository.model.Repair;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 
 @Service
@@ -41,15 +42,14 @@ public class RepairService {
 
     }
 
-    public List<Repair> findCustomerRepairs(Integer customerId){
-     return repairCriteriaRepository.findCustomerRepairs(customerId);
 
-    }
-    public List<Repair> findRepairsByCustomerPhoneNumber(String phoneNumber){
-     return repairCriteriaRepository.findRepairsByCustomerPhoneNumber(phoneNumber);
-
+    public List<Repair> findRepairsByCustomerInfo(Integer customerId, String name, String surname, String phoneNumber1, String email) throws InputMismatchException {
+        return repairCriteriaRepository.findRepairsByCustomerInfo(customerId,name,surname,phoneNumber1,email);
     }
 
+ public List<Repair> findRepairsByDeviceInfo(Integer deviceId, String imei, String serialNumber) throws InputMismatchException {
+        return repairCriteriaRepository.findRepairsByDeviceInfo(deviceId,imei,serialNumber);
+    }
 
 
 

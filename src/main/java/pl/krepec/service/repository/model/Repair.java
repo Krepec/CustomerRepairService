@@ -60,6 +60,13 @@ public class Repair {
     @JoinColumn(name="customerid",insertable = false, updatable = false)
     private Customer customer;
 
+    @NotFound(action = NotFoundAction.IGNORE)
+    @ManyToOne
+    @JoinColumn(name="deviceid",insertable = false, updatable = false)
+    private Device device;
+
+
+
     public void setRepairId(Integer repairId) {
         this.repairId = repairId;
     }

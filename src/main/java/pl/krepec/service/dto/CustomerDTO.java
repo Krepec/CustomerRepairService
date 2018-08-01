@@ -2,7 +2,7 @@ package pl.krepec.service.dto;
 
 public class CustomerDTO {
 
-    private long customerId;
+    private Long customerId;
 
     private String name;
 
@@ -24,7 +24,7 @@ public class CustomerDTO {
 
     private String email;
 
-    public void setCustomerId(Integer customerId) {
+    public void setCustomerId(Long customerId) {
         this.customerId = customerId;
     }
 

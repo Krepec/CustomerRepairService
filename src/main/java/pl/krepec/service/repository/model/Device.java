@@ -1,6 +1,8 @@
 package pl.krepec.service.repository.model;
 
 import javax.persistence.*;
+import java.util.List;
+
 // zmienic typ w bazie danych
 @Entity
 @Table(name = "devices")
@@ -25,6 +27,9 @@ public class Device {
 
     @Column(name = "Comments")
     private String comments;
+
+    @OneToMany(fetch=FetchType.LAZY, mappedBy="device")
+    private List<Repair> repairs;
 
     public void setDeviceId(Integer deviceId) {
         this.deviceId = deviceId;

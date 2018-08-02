@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f7430d0-e495-4580-af29-4baeca4f5033" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/RepairCriteriaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/RepairCriteriaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Repair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Repair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/model/Repair.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/krepec/service/repository/model/Repair.class" afterDir="false" />
-    </list>
+    <list default="true" id="6f7430d0-e495-4580-af29-4baeca4f5033" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,8 +28,8 @@
       <file leaf-file-name="Repair.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Repair.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="60" column="29" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="29" />
+            <state relative-caret-position="120">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
               <folding>
                 <element signature="e#1877#1878#0" expanded="true" />
                 <element signature="e#1921#1922#0" expanded="true" />
@@ -85,6 +80,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="JoinColumn.java" pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar!/javax/persistence/JoinColumn.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -103,10 +107,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RepairCriteriaRepository.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RepairCriteriaRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/RepairCriteriaRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
+            <state relative-caret-position="-285">
               <caret line="74" column="9" lean-forward="true" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -243,8 +247,8 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Device.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/controller/RepairController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/RepairService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Repair.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/RepairCriteriaRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Repair.java" />
       </list>
     </option>
   </component>
@@ -277,6 +281,11 @@
             <path>
               <item name="customerrepairserviceee" type="b2602c69:ProjectViewProjectNode" />
               <item name="customerrepairserviceee" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="customerrepairserviceee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="customerrepairserviceee" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="customerrepairserviceee" type="b2602c69:ProjectViewProjectNode" />
@@ -618,13 +627,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.13.RELEASE/spring-core-4.3.13.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="106" selection-start-line="106" selection-end-line="106" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/4.3.13.RELEASE/spring-tx-4.3.13.RELEASE.jar!/org/springframework/dao/support/PersistenceExceptionTranslationInterceptor.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -969,10 +971,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="44" column="14" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/RepairCriteriaRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-285">
+          <caret line="74" column="9" lean-forward="true" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Repair.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="60" column="29" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="29" />
+        <state relative-caret-position="120">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
           <folding>
             <element signature="e#1877#1878#0" expanded="true" />
             <element signature="e#1921#1922#0" expanded="true" />
@@ -1022,23 +1044,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/model/Customer.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="44" column="14" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krepec/service/repository/RepairCriteriaRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="74" column="9" lean-forward="true" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="148">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>

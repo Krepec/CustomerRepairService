@@ -62,11 +62,11 @@ public class RepairCriteriaRepository {
         Root<Device> deviceRoot = criteriaQuery.from(Device.class);
         Join<Device, Repair> repairs = deviceRoot.join("repairs");
 
-        Predicate predicateDeviceId = criteriaBuilder.equal(deviceRoot.get(Device_.deviceId), deviceId);
         Predicate predicateImei = criteriaBuilder.equal(deviceRoot.get(Device_.imei), imei);
         Predicate predicateSerialNumber = criteriaBuilder.equal(deviceRoot.get(Device_.serialNumber), serialNumber);
 
         if (deviceId != null) {
+            Predicate predicateDeviceId = criteriaBuilder.equal(deviceRoot.get(Device_.deviceId), deviceId);
             return getRepairs2(criteriaQuery, repairs, predicateDeviceId);
         } else if (imei != null) {
             return getRepairs2(criteriaQuery, repairs, predicateImei);

@@ -48,12 +48,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-jpamodelgen</artifactId>
-            <version>4.3.8.Final</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.39</version>

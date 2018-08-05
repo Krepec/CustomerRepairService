@@ -21,7 +21,7 @@ public class RepairDTO {
 
     private Integer deliveryTypeId;
 
-    @JsonFormat(pattern="d  d.MM.yyyy")
+    @JsonFormat(pattern="dd.MM.yyyy")
     private Date startDate;
 
     @JsonFormat(pattern="dd.MM.yyyy")

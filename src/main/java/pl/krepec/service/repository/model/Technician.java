@@ -1,6 +1,7 @@
 package pl.krepec.service.repository.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "technicians")
@@ -16,6 +17,9 @@ public class Technician {
 
     @Column(name = "Surname")
     private String surname;
+
+    @OneToMany(fetch=FetchType.LAZY, mappedBy="technician")
+    private List<Repair> repairs;
 
     public Integer getTechnicianId() {
         return technicianId;

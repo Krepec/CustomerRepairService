@@ -54,17 +54,29 @@ public class Repair {
     @Column(name = "Comments")
     private String comments;
 
-
     @ManyToOne
-    @JoinColumn(name="customerid",insertable = false, updatable = false)
-    private Customer customer;
-
-
-    @ManyToOne
-    @JoinColumn(name="deviceid",insertable = false, updatable = false)
+    @JoinColumn(name = "deviceid", insertable = false, updatable = false)
     private Device device;
 
+    @ManyToOne
+    @JoinColumn(name = "customerid", insertable = false, updatable = false)
+    private Customer customer;
 
+    @ManyToOne
+    @JoinColumn(name = "technicianid", insertable = false, updatable = false)
+    private Technician technician;
+
+   /* @ManyToOne
+    @JoinColumn(name = "partid", insertable = false, updatable = false)
+    private Part part;*/
+
+    @ManyToOne
+    @JoinColumn(name = "statusid", insertable = false, updatable = false)
+    private Status status;
+
+    @ManyToOne
+    @JoinColumn(name = "Repair_typeID", insertable = false, updatable = false)
+    private RepairType repairType;
 
     public void setRepairId(Integer repairId) {
         this.repairId = repairId;

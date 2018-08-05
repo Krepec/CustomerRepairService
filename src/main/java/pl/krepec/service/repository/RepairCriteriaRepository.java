@@ -24,27 +24,26 @@ public class RepairCriteriaRepository {
         Root<Customer> customerRoot = criteriaQuery.from(Customer.class);
         Join<Customer, Repair> repairs = customerRoot.join("repairs");
 
-        Predicate predicateCustomerId = criteriaBuilder.equal(customerRoot.get(Customer_.customerId), customerId);
-        Predicate predicateName = criteriaBuilder.equal(customerRoot.get(Customer_.name), name);
-        Predicate predicateSurmane = criteriaBuilder.equal(customerRoot.get(Customer_.surname), surname);
-        Predicate predicatePhoneNumber1 = criteriaBuilder.equal(customerRoot.get(Customer_.phoneNumber1), phoneNumber1);
-        Predicate predicateEmail = criteriaBuilder.equal(customerRoot.get(Customer_.email), email);
-
         if (customerId != null) {
-            return getRepairs(criteriaQuery, repairs, predicateCustomerId);
+            Predicate predicateCustomerId = criteriaBuilder.equal(customerRoot.get(Customer_.customerId), customerId);
+            return getRepairsByCustomerInfo(criteriaQuery, repairs, predicateCustomerId);
         } else if (name != null) {
-            return getRepairs(criteriaQuery, repairs, predicateName);
+            Predicate predicateName = criteriaBuilder.equal(customerRoot.get(Customer_.name), name);
+            return getRepairsByCustomerInfo(criteriaQuery, repairs, predicateName);
         } else if (surname != null) {
-            return getRepairs(criteriaQuery, repairs, predicateSurmane);
+            Predicate predicateSurmane = criteriaBuilder.equal(customerRoot.get(Customer_.surname), surname);
+            return getRepairsByCustomerInfo(criteriaQuery, repairs, predicateSurmane);
         } else if (phoneNumber1 != null) {
-            return getRepairs(criteriaQuery, repairs, predicatePhoneNumber1);
+            Predicate predicatePhoneNumber1 = criteriaBuilder.equal(customerRoot.get(Customer_.phoneNumber1), phoneNumber1);
+            return getRepairsByCustomerInfo(criteriaQuery, repairs, predicatePhoneNumber1);
         } else if (email != null) {
-            return getRepairs(criteriaQuery, repairs, predicateEmail);
+            Predicate predicateEmail = criteriaBuilder.equal(customerRoot.get(Customer_.email), email);
+            return getRepairsByCustomerInfo(criteriaQuery, repairs, predicateEmail);
         }
         throw new InputMismatchException("WPROWADZONO BŁĘDNE DANE !!!");
     }
 
-    private List<Repair> getRepairs(CriteriaQuery<Repair> criteriaQuery, Join<Customer, Repair> repairs, Predicate inputPredicate) {
+    private List<Repair> getRepairsByCustomerInfo(CriteriaQuery<Repair> criteriaQuery, Join<Customer, Repair> repairs, Predicate inputPredicate) {
         List<Repair> customersRepairList = new ArrayList<>();
         criteriaQuery.select(repairs).where(inputPredicate);
         List<Repair> results = entityManager.createQuery(criteriaQuery).getResultList();
@@ -62,22 +61,21 @@ public class RepairCriteriaRepository {
         Root<Device> deviceRoot = criteriaQuery.from(Device.class);
         Join<Device, Repair> repairs = deviceRoot.join("repairs");
 
-        Predicate predicateImei = criteriaBuilder.equal(deviceRoot.get(Device_.imei), imei);
-        Predicate predicateSerialNumber = criteriaBuilder.equal(deviceRoot.get(Device_.serialNumber), serialNumber);
-
         if (deviceId != null) {
             Predicate predicateDeviceId = criteriaBuilder.equal(deviceRoot.get(Device_.deviceId), deviceId);
-            return getRepairs2(criteriaQuery, repairs, predicateDeviceId);
+            return getRepairsByDeviceInfo(criteriaQuery, repairs, predicateDeviceId);
         } else if (imei != null) {
-            return getRepairs2(criteriaQuery, repairs, predicateImei);
+            Predicate predicateImei = criteriaBuilder.equal(deviceRoot.get(Device_.imei), imei);
+            return getRepairsByDeviceInfo(criteriaQuery, repairs, predicateImei);
         } else if (serialNumber != null) {
-            return getRepairs2(criteriaQuery, repairs, predicateSerialNumber);
+            Predicate predicateSerialNumber = criteriaBuilder.equal(deviceRoot.get(Device_.serialNumber), serialNumber);
+            return getRepairsByDeviceInfo(criteriaQuery, repairs, predicateSerialNumber);
         }
 
         throw new InputMismatchException("WPROWADZONO BŁĘDNE DANE !!!");
     }
 
-            private List<Repair> getRepairs2(CriteriaQuery<Repair> criteriaQuery, Join<Device, Repair> repairs, Predicate inputPredicate) {
+    private List<Repair> getRepairsByDeviceInfo(CriteriaQuery<Repair> criteriaQuery, Join<Device, Repair> repairs, Predicate inputPredicate) {
         List<Repair> customersRepairList = new ArrayList<>();
         criteriaQuery.select(repairs).where(inputPredicate);
         List<Repair> results = entityManager.createQuery(criteriaQuery).getResultList();
@@ -87,16 +85,33 @@ public class RepairCriteriaRepository {
         }
         return customersRepairList;
     }
+
+
+    public List<Repair> findRepairsByTechnicianInfo(Integer technicianId) throws InputMismatchException {
+
+        CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Repair> criteriaQuery = criteriaBuilder.createQuery(Repair.class);
+        Root<Technician> deviceRoot = criteriaQuery.from(Technician.class);
+        Join<Technician, Repair> repairs = deviceRoot.join("repairs");
+
+        if (technicianId != null) {
+            Predicate predicateTechnicianID = criteriaBuilder.equal(deviceRoot.get(Technician_.technicianId), technicianId);
+            return getRepairsByTechnicianInfo(criteriaQuery, repairs, predicateTechnicianID);
+        } else throw new InputMismatchException("WPROWADZONO BŁĘDNE DANE !!!");
+    }
+
+    private List<Repair> getRepairsByTechnicianInfo(CriteriaQuery<Repair> criteriaQuery, Join<Technician, Repair> repairs, Predicate inputPredicate) {
+        List<Repair> customersRepairList = new ArrayList<>();
+        criteriaQuery.select(repairs).where(inputPredicate);
+        List<Repair> results = entityManager.createQuery(criteriaQuery).getResultList();
+        for (Repair repair : results) {
+            customersRepairList.add(repair);
+
+        }
+        return customersRepairList;
+    }
+
 }
-
-
-
-
-
-
-
-
-
 
 
 // STARE METODY

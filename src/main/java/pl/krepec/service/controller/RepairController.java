@@ -11,8 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/repairs")
-public class
-RepairController {
+public class RepairController {
 
     @Autowired
     private RepairService repairService;
@@ -51,6 +50,12 @@ RepairController {
              @RequestParam(required = false, value = "serialnumber") String serialNumber) throws InputMismatchException {
 
         return repairService.findRepairsByDeviceInfo(deviceId, imei, serialNumber);
+    }
+
+    @RequestMapping("/technician/{technicianid}")
+    public List<Repair> findRepairsByDeviceInfo(@PathVariable ("technicianid") Integer technicianId) throws InputMismatchException {
+
+        return repairService.findRepairsByTechnicianInfo(technicianId);
     }
 
 }

@@ -1,10 +1,13 @@
 package pl.krepec.service.repository.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.hibernate.annotations.NotFound;
 import org.hibernate.annotations.NotFoundAction;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.persistence.criteria.ListJoin;
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -40,6 +43,7 @@ public class Repair {
     private Integer deliveryTypeId;
 
     @Column(name = "Start_date")
+    @Temporal(TemporalType.DATE)
     private Date startDate;
 
     @Column(name = "End_date")
@@ -66,16 +70,12 @@ public class Repair {
     @JoinColumn(name = "technicianid", insertable = false, updatable = false)
     private Technician technician;
 
-   /* @ManyToOne
-    @JoinColumn(name = "partid", insertable = false, updatable = false)
-    private Part part;*/
-
     @ManyToOne
     @JoinColumn(name = "statusid", insertable = false, updatable = false)
     private Status status;
 
     @ManyToOne
-    @JoinColumn(name = "Repair_typeID", insertable = false, updatable = false)
+    @JoinColumn(name = "repair_typeid", insertable = false, updatable = false)
     private RepairType repairType;
 
     public void setRepairId(Integer repairId) {

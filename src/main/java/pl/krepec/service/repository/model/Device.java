@@ -28,7 +28,7 @@ public class Device {
     @Column(name = "Comments")
     private String comments;
 
-    @OneToMany(fetch=FetchType.LAZY, mappedBy="device")
+    @OneToMany(mappedBy="device")
     private List<Repair> repairs;
 
     public void setDeviceId(Integer deviceId) {

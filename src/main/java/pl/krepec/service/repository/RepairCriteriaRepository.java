@@ -111,6 +111,63 @@ public class RepairCriteriaRepository {
         return customersRepairList;
     }
 
+    public List<Repair> findRepairsByStatusInfo(Integer statusId, String status) throws InputMismatchException {
+
+        CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Repair> criteriaQuery = criteriaBuilder.createQuery(Repair.class);
+        Root<Status> deviceRoot = criteriaQuery.from(Status.class);
+        Join<Status, Repair> repairs = deviceRoot.join("repairs");
+
+        if (statusId != null) {
+            Predicate predicateStatusId = criteriaBuilder.equal(deviceRoot.get(Status_.statusId), statusId);
+            return getRepairsByStatus(criteriaQuery, repairs, predicateStatusId);
+        } else if (status != null) {
+            Predicate predicateStatus = criteriaBuilder.equal(deviceRoot.get(Status_.status),status);
+            return getRepairsByStatus(criteriaQuery, repairs, predicateStatus);
+
+        } else throw new InputMismatchException("WPROWADZONO BŁĘDNE DANE !!!");
+    }
+
+    private List<Repair> getRepairsByStatus(CriteriaQuery<Repair> criteriaQuery, Join<Status, Repair> repairs, Predicate inputPredicate) {
+        List<Repair> customersRepairList = new ArrayList<>();
+        criteriaQuery.select(repairs).where(inputPredicate);
+        List<Repair> results = entityManager.createQuery(criteriaQuery).getResultList();
+        for (Repair repair : results) {
+            customersRepairList.add(repair);
+
+        }
+        return customersRepairList;
+    }
+
+    public List<Repair> findRepairsByRepairTypeInfo(Integer repairTypeId, String repairTypeName) throws InputMismatchException {
+
+        CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Repair> criteriaQuery = criteriaBuilder.createQuery(Repair.class);
+        Root<RepairType> deviceRoot = criteriaQuery.from(RepairType.class);
+        Join<RepairType, Repair> repairs = deviceRoot.join("repairs");
+
+        if (repairTypeId != null) {
+            Predicate predicateDeliveryTypeId = criteriaBuilder.equal(deviceRoot.get(RepairType_.repairTypeId), repairTypeId);
+            return getRepairsByRepairType(criteriaQuery, repairs, predicateDeliveryTypeId);
+        } else if (repairTypeName != null) {
+            Predicate predicateDeliveryType = criteriaBuilder.equal(deviceRoot.get(RepairType_.repairTypeName), repairTypeName);
+            return getRepairsByRepairType(criteriaQuery, repairs, predicateDeliveryType);
+
+        } else throw new InputMismatchException("WPROWADZONO BŁĘDNE DANE !!!");
+    }
+
+    private List<Repair> getRepairsByRepairType(CriteriaQuery<Repair> criteriaQuery, Join<RepairType, Repair> repairs, Predicate inputPredicate) {
+        List<Repair> customersRepairList = new ArrayList<>();
+        criteriaQuery.select(repairs).where(inputPredicate);
+        List<Repair> results = entityManager.createQuery(criteriaQuery).getResultList();
+        for (Repair repair : results) {
+            customersRepairList.add(repair);
+
+        }
+        return customersRepairList;
+    }
+
+
 }
 
 

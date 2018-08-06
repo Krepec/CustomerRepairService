@@ -53,9 +53,25 @@ public class RepairController {
     }
 
     @RequestMapping("/technician/{technicianid}")
-    public List<Repair> findRepairsByDeviceInfo(@PathVariable ("technicianid") Integer technicianId) throws InputMismatchException {
+    public List<Repair> findRepairsByDeviceInfo(@PathVariable("technicianid") Integer technicianId) throws InputMismatchException {
 
         return repairService.findRepairsByTechnicianInfo(technicianId);
+    }
+
+    @RequestMapping("/status/")
+    public List<Repair> findRepairsByStatusInfo(
+            @RequestParam(required = false, value = "statusid") Integer statusId,
+            @RequestParam(required = false, value = "status") String status) throws InputMismatchException {
+
+        return repairService.findRepairsByStatusInfo(statusId, status);
+    }
+
+    @RequestMapping("/repairtype/")
+    public List<Repair> findRepairsByRepairTypeInfo(
+            @RequestParam(required = false, value = "repairtypeid") Integer repairTypeId,
+            @RequestParam(required = false, value = "repairtypename") String repairTypeName) throws InputMismatchException {
+
+        return repairService.findRepairsByRepairTypeInfo(repairTypeId, repairTypeName);
     }
 
 }

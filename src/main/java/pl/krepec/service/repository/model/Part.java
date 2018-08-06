@@ -1,6 +1,7 @@
 package pl.krepec.service.repository.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "parts")
@@ -16,6 +17,7 @@ public class Part {
 
     @Column(name = "Price")
     private Double price;
+
 
     public Integer getPartTypeId() {
         return partTypeId;

@@ -1,6 +1,7 @@
 package pl.krepec.service.repository.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "repair_type")
@@ -14,6 +15,9 @@ public class RepairType {
 
     @Column(name = "Repair_type_name")
     private String repairTypeName;
+
+    @OneToMany(mappedBy = "repairType")
+    public List<Repair> repairs;
 
     public Integer getRepairTypeId() {
         return repairTypeId;

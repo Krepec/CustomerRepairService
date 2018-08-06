@@ -55,6 +55,14 @@ public class RepairService {
         return repairCriteriaRepository.findRepairsByTechnicianInfo(technicianId);
     }
 
+    public List<Repair> findRepairsByStatusInfo(Integer statusId, String status) throws InputMismatchException {
+        return repairCriteriaRepository.findRepairsByStatusInfo(statusId, status);
+    }
+
+    public List<Repair> findRepairsByRepairTypeInfo(Integer repaiRTypeId, String repairTypeName) throws InputMismatchException {
+        return repairCriteriaRepository.findRepairsByRepairTypeInfo(repaiRTypeId, repairTypeName);
+    }
+
 
     public Integer addNewRepair(RepairDTO repairDTO) {
         Repair repair = repairRepository.save(new Repair(repairDTO.getRepairId(), repairDTO.getDeviceId(), repairDTO.getCustomerId(),

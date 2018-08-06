@@ -42,7 +42,7 @@ public class Customer {
     @Column(name = "Email")
     private String email;
 
-    @OneToMany(fetch=FetchType.LAZY, mappedBy="customer")
+    @OneToMany(mappedBy="customer")
     private List<Repair> repairs;
 
     public void setCustomerId(Integer customerId) {

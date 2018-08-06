@@ -1,6 +1,8 @@
 package pl.krepec.service.repository.model;
 
 import javax.persistence.*;
+import javax.websocket.OnError;
+import java.util.List;
 
 @Entity
 @Table(name = "status")
@@ -14,6 +16,8 @@ public class Status {
     @Column(name = "StatusDTO")
     private String status;
 
+    @OneToMany(mappedBy = "status")
+    public List<Repair> repairs;
 
     public Integer getStatusId() {
         return statusId;

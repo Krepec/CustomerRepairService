@@ -5,29 +5,26 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import java.util.Date;
 
 public class RepairDTO {
-    private Integer repairId;
+    private Long repairId;
 
-    private Integer deviceId;
+    private Long deviceId;
 
-    private Integer customerId;
+    private Long customerId;
 
-    private Integer technicianId;
+    private Long technicianId;
 
-    private Integer partId;
+    private Long partId;
 
-    private Integer statusId;
+    private Long statusId;
 
-    private Integer repairTypeId;
+    private Long repairTypeId;
 
-    private Integer deliveryTypeId;
+    private Long deliveryTypeId;
 
-    @JsonFormat(pattern="dd.MM.yyyy")
     private Date startDate;
 
-    @JsonFormat(pattern="dd.MM.yyyy")
     private Date endDate;
 
-    @JsonFormat(pattern="dd.MM.yyyy")
     private Date purchaseDate;
 
     private String issueDescribe;
@@ -35,67 +32,67 @@ public class RepairDTO {
     private String comments;
 
 
-    public void setRepairId(Integer repairId) {
+    public void setRepairId(Long repairId) {
         this.repairId = repairId;
     }
 
-    public Integer getRepairId() {
+    public Long getRepairId() {
         return repairId;
     }
 
-    public void setDeviceId(Integer deviceId) {
+    public void setDeviceId(Long deviceId) {
         this.deviceId = deviceId;
     }
 
-    public Integer getDeviceId() {
+    public Long getDeviceId() {
         return deviceId;
     }
 
-    public void setCustomerId(Integer customerId) {
+    public void setCustomerId(Long customerId) {
         this.customerId = customerId;
     }
 
-    public Integer getCustomerId() {
+    public Long getCustomerId() {
         return customerId;
     }
 
-    public void setTechnicianId(Integer technicianId) {
+    public void setTechnicianId(Long technicianId) {
         this.technicianId = technicianId;
     }
 
-    public Integer getTechnicianId() {
+    public Long getTechnicianId() {
         return technicianId;
     }
 
-    public void setPartId(Integer partId) {
+    public void setPartId(Long partId) {
         this.partId = partId;
     }
 
-    public Integer getPartId() {
+    public Long getPartId() {
         return partId;
     }
 
-    public void setStatusId(Integer statusId) {
+    public void setStatusId(Long statusId) {
         this.statusId = statusId;
     }
 
-    public Integer getStatusId() {
+    public Long getStatusId() {
         return statusId;
     }
 
-    public void setRepairTypeId(Integer repairTypeId) {
+    public void setRepairTypeId(Long repairTypeId) {
         this.repairTypeId = repairTypeId;
     }
 
-    public Integer getRepairTypeId() {
+    public Long getRepairTypeId() {
         return repairTypeId;
     }
 
-    public void setDeliveryTypeId(Integer deliveryTypeId) {
+    public void setDeliveryTypeId(Long deliveryTypeId) {
         this.deliveryTypeId = deliveryTypeId;
     }
 
-    public Integer getDeliveryTypeId() {
+    public Long getDeliveryTypeId() {
         return deliveryTypeId;
     }
 
@@ -142,8 +139,8 @@ public class RepairDTO {
     public RepairDTO() {
     }
 
-    public RepairDTO(Integer repairId, Integer deviceId, Integer customerId, Integer technicianId, Integer partId, Integer statusId,
-                     Integer repairTypeId, Integer deliveryTypeId, Date startDate, Date endDate, Date purchaseDate, String issueDescribe, String comments) {
+    public RepairDTO(Long repairId, Long deviceId, Long customerId, Long technicianId, Long partId, Long statusId,
+                     Long repairTypeId, Long deliveryTypeId, Date startDate, Date endDate, Date purchaseDate, String issueDescribe, String comments) {
 
         this.repairId = repairId;
         this.deviceId = deviceId;

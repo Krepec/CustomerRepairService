@@ -11,7 +11,7 @@ public class Device {
     @Id
     @GeneratedValue
     @Column(name = "DeviceID")
-    private Integer deviceId;
+    private Long deviceId;
 
     @Column(name = "Mark")
     private String mark;
@@ -31,11 +31,11 @@ public class Device {
     @OneToMany(mappedBy="device")
     private List<Repair> repairs;
 
-    public void setDeviceId(Integer deviceId) {
+    public void setDeviceId(Long deviceId) {
         this.deviceId = deviceId;
     }
 
-    public Integer getDeviceId() {
+    public Long getDeviceId() {
         return deviceId;
     }
 
@@ -79,7 +79,7 @@ public class Device {
         this.comments = comments;
     }
 
-    public Device(Integer deviceId, String mark, String model, String serialNumber, Long imei, String comments) {
+    public Device(Long deviceId, String mark, String model, String serialNumber, Long imei, String comments) {
         this.deviceId = deviceId;
         this.mark = mark;
         this.model = model;

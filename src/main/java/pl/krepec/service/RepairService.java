@@ -16,6 +16,7 @@ public class RepairService {
 
     @Autowired
     private RepairRepository repairRepository;
+
     @Autowired
     private RepairCriteriaRepository repairCriteriaRepository;
 
@@ -43,28 +44,32 @@ public class RepairService {
     }
 
 
-    public List<Repair> findRepairsByCustomerInfo(Integer customerId, String name, String surname, String phoneNumber1, String email) throws InputMismatchException {
+    public List<Repair> findRepairsByCustomerInfo(Long customerId, String name, String surname, String phoneNumber1, String email) throws InputMismatchException {
         return repairCriteriaRepository.findRepairsByCustomerInfo(customerId, name, surname, phoneNumber1, email);
     }
 
-    public List<Repair> findRepairsByDeviceInfo(Integer deviceId, String imei, String serialNumber) throws InputMismatchException {
+    public List<Repair> findRepairsByDeviceInfo(Long deviceId, String imei, String serialNumber) throws InputMismatchException {
         return repairCriteriaRepository.findRepairsByDeviceInfo(deviceId, imei, serialNumber);
     }
 
-    public List<Repair> findRepairsByTechnicianInfo(Integer technicianId) throws InputMismatchException {
+    public List<Repair> findRepairsByTechnicianInfo(Long technicianId) throws InputMismatchException {
         return repairCriteriaRepository.findRepairsByTechnicianInfo(technicianId);
     }
 
-    public List<Repair> findRepairsByStatusInfo(Integer statusId, String status) throws InputMismatchException {
+    public List<Repair> findRepairsByStatusInfo(Long statusId, String status) throws InputMismatchException {
         return repairCriteriaRepository.findRepairsByStatusInfo(statusId, status);
     }
 
-    public List<Repair> findRepairsByRepairTypeInfo(Integer repaiRTypeId, String repairTypeName) throws InputMismatchException {
+    public List<Repair> findRepairsByRepairTypeInfo(Long repaiRTypeId, String repairTypeName) throws InputMismatchException {
         return repairCriteriaRepository.findRepairsByRepairTypeInfo(repaiRTypeId, repairTypeName);
     }
 
+    public RepairDTO findREpairById(Long id){
+        Repair repair = repairRepository.findOne(id);
+        return mapRepair(repair);
+    }
 
-    public Integer addNewRepair(RepairDTO repairDTO) {
+    public Long addNewRepair(RepairDTO repairDTO) {
         Repair repair = repairRepository.save(new Repair(repairDTO.getRepairId(), repairDTO.getDeviceId(), repairDTO.getCustomerId(),
                 repairDTO.getTechnicianId(), repairDTO.getPartId(), repairDTO.getStatusId(), repairDTO.getRepairTypeId(),
                 repairDTO.getDeliveryTypeId(), repairDTO.getStartDate(), repairDTO.getEndDate(), repairDTO.getPurchaseDate(),

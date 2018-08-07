@@ -2,7 +2,7 @@ package pl.krepec.service.dto;
 
 public class DeviceDTO {
 
-    private Integer deviceId;
+    private Long deviceId;
 
     private String mark;
 
@@ -14,11 +14,11 @@ public class DeviceDTO {
 
     private String comments;
 
-    public void setDeviceId(Integer deviceId) {
+    public void setDeviceId(Long deviceId) {
         this.deviceId = deviceId;
     }
 
-    public Integer getDeviceId() {
+    public Long getDeviceId() {
         return deviceId;
     }
 
@@ -62,7 +62,7 @@ public class DeviceDTO {
         this.comments = comments;
     }
 
-    public DeviceDTO(Integer deviceId, String mark, String model, String serialNumber, Long imei, String comments) {
+    public DeviceDTO(Long deviceId, String mark, String model, String serialNumber, Long imei, String comments) {
         this.deviceId = deviceId;
         this.mark = mark;
         this.model = model;

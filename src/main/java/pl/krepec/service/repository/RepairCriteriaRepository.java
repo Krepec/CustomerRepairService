@@ -17,7 +17,7 @@ public class RepairCriteriaRepository {
     @Autowired
     private EntityManager entityManager;
 
-    public List<Repair> findRepairsByCustomerInfo(Integer customerId, String name, String surname, String phoneNumber1, String email) throws InputMismatchException {
+    public List<Repair> findRepairsByCustomerInfo(Long customerId, String name, String surname, String phoneNumber1, String email) throws InputMismatchException {
 
         CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
         CriteriaQuery<Repair> criteriaQuery = criteriaBuilder.createQuery(Repair.class);
@@ -54,7 +54,7 @@ public class RepairCriteriaRepository {
         return customersRepairList;
     }
 
-    public List<Repair> findRepairsByDeviceInfo(Integer deviceId, String imei, String serialNumber) throws InputMismatchException {
+    public List<Repair> findRepairsByDeviceInfo(Long deviceId, String imei, String serialNumber) throws InputMismatchException {
 
         CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
         CriteriaQuery<Repair> criteriaQuery = criteriaBuilder.createQuery(Repair.class);
@@ -87,7 +87,7 @@ public class RepairCriteriaRepository {
     }
 
 
-    public List<Repair> findRepairsByTechnicianInfo(Integer technicianId) throws InputMismatchException {
+    public List<Repair> findRepairsByTechnicianInfo(Long technicianId) throws InputMismatchException {
 
         CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
         CriteriaQuery<Repair> criteriaQuery = criteriaBuilder.createQuery(Repair.class);
@@ -111,7 +111,7 @@ public class RepairCriteriaRepository {
         return customersRepairList;
     }
 
-    public List<Repair> findRepairsByStatusInfo(Integer statusId, String status) throws InputMismatchException {
+    public List<Repair> findRepairsByStatusInfo(Long statusId, String status) throws InputMismatchException {
 
         CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
         CriteriaQuery<Repair> criteriaQuery = criteriaBuilder.createQuery(Repair.class);
@@ -139,7 +139,7 @@ public class RepairCriteriaRepository {
         return customersRepairList;
     }
 
-    public List<Repair> findRepairsByRepairTypeInfo(Integer repairTypeId, String repairTypeName) throws InputMismatchException {
+    public List<Repair> findRepairsByRepairTypeInfo(Long repairTypeId, String repairTypeName) throws InputMismatchException {
 
         CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
         CriteriaQuery<Repair> criteriaQuery = criteriaBuilder.createQuery(Repair.class);
@@ -173,7 +173,7 @@ public class RepairCriteriaRepository {
 
 // STARE METODY
 /*
-    public List<Repair> findCustomerRepairs(Integer customerId) {
+    public List<Repair> findCustomerRepairs(Long customerId) {
 
         List<Repair> customersRepairList = new ArrayList<>();
         CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();

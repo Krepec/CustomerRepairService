@@ -12,8 +12,8 @@ public class DeviceController {
     @Autowired
     private DeviceService deviceService;
 
-    @GetMapping("/{Id}")
-    public DeviceDTO findById(@PathVariable("Id") Long deviceId) {
+    @GetMapping("/{deviceid}")
+    public DeviceDTO findById(@PathVariable("deviceid") Long deviceId) {
         return deviceService.fingById(deviceId);
     }
 
@@ -26,7 +26,7 @@ public class DeviceController {
     }
 
     @PostMapping(value = "/devices", consumes = "application/json")
-    public Integer addDevice(@RequestBody DeviceDTO deviceDTO) {
+    public Long addDevice(@RequestBody DeviceDTO deviceDTO) {
         return deviceService.addNewDevice(deviceDTO);
     }
 

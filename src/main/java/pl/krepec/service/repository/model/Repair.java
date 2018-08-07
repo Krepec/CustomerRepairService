@@ -19,36 +19,39 @@ public class Repair {
     @Id
     @GeneratedValue
     @Column(name = "RepairID")
-    private Integer repairId;
+    private Long repairId;
 
     @Column(name = "DeviceID")
-    private Integer deviceId;
+    private Long deviceId;
 
     @Column(name = "CustomerID")
-    private Integer customerId;
+    private Long customerId;
 
     @Column(name = "TechnicianID")
-    private Integer technicianId;
+    private Long technicianId;
 
     @Column(name = "PartID")
-    private Integer partId;
+    private Long partId;
 
     @Column(name = "StatusID")
-    private Integer statusId;
+    private Long statusId;
 
     @Column(name = "Repair_typeID")
-    private Integer repairTypeId;
+    private Long repairTypeId;
 
     @Column(name = "Delivery_typeID")
-    private Integer deliveryTypeId;
+    private Long deliveryTypeId;
 
-    @Column(name = "Start_date")
+    //ustawia w jakim formacie bedzie wyświetlona data yyyy-MM-dd
     @Temporal(TemporalType.DATE)
+    @NotNull(message = "NIE WPROWADZONO DATY ROZPOCZECIA NAPRAWY")
+    @Column(name = "Start_date")
     private Date startDate;
 
     @Column(name = "End_date")
     private Date endDate;
 
+    @NotNull(message = "NIE WPROWADZONO DATY ZAKUPU URZADZENIA")
     @Column(name = "Purchase_date")
     private Date purchaseDate;
 
@@ -78,67 +81,67 @@ public class Repair {
     @JoinColumn(name = "repair_typeid", insertable = false, updatable = false)
     private RepairType repairType;
 
-    public void setRepairId(Integer repairId) {
+    public void setRepairId(Long repairId) {
         this.repairId = repairId;
     }
 
-    public Integer getRepairId() {
+    public Long getRepairId() {
         return repairId;
     }
 
-    public void setDeviceId(Integer deviceId) {
+    public void setDeviceId(Long deviceId) {
         this.deviceId = deviceId;
     }
 
-    public Integer getDeviceId() {
+    public Long getDeviceId() {
         return deviceId;
     }
 
-    public void setCustomerId(Integer customerId) {
+    public void setCustomerId(Long customerId) {
         this.customerId = customerId;
     }
 
-    public Integer getCustomerId() {
+    public Long getCustomerId() {
         return customerId;
     }
 
-    public void setTechnicianId(Integer technicianId) {
+    public void setTechnicianId(Long technicianId) {
         this.technicianId = technicianId;
     }
 
-    public Integer getTechnicianId() {
+    public Long getTechnicianId() {
         return technicianId;
     }
 
-    public void setPartId(Integer partId) {
+    public void setPartId(Long partId) {
         this.partId = partId;
     }
 
-    public Integer getPartId() {
+    public Long getPartId() {
         return partId;
     }
 
-    public void setStatusId(Integer statusId) {
+    public void setStatusId(Long statusId) {
         this.statusId = statusId;
     }
 
-    public Integer getStatusId() {
+    public Long getStatusId() {
         return statusId;
     }
 
-    public void setRepairTypeId(Integer repairTypeId) {
+    public void setRepairTypeId(Long repairTypeId) {
         this.repairTypeId = repairTypeId;
     }
 
-    public Integer getRepairTypeId() {
+    public Long getRepairTypeId() {
         return repairTypeId;
     }
 
-    public void setDeliveryTypeId(Integer deliveryTypeId) {
+    public void setDeliveryTypeId(Long deliveryTypeId) {
         this.deliveryTypeId = deliveryTypeId;
     }
 
-    public Integer getDeliveryTypeId() {
+    public Long getDeliveryTypeId() {
         return deliveryTypeId;
     }
 
@@ -182,8 +185,8 @@ public class Repair {
         return issueDescribe;
     }
 
-    public Repair(Integer repairId, Integer deviceId, Integer customerId, Integer technicianId, Integer partId, Integer statusId,
-                  Integer repairTypeId, Integer deliveryTypeId, Date startDate, Date endDate, Date purchaseDate, String issueDescribe, String comments) {
+    public Repair(Long repairId, Long deviceId, Long customerId, Long technicianId, Long partId, Long statusId,
+                  Long repairTypeId, Long deliveryTypeId, Date startDate, Date endDate, Date purchaseDate, String issueDescribe, String comments) {
 
         this.repairId = repairId;
         this.deviceId = deviceId;

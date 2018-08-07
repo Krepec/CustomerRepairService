@@ -22,7 +22,7 @@ public class RepairController {
     }
 
     @PostMapping(value = "/repairs", consumes = "application/json")
-    public Integer addNewRepair(@RequestBody RepairDTO repairDTO) {
+    public Long addNewRepair(@RequestBody RepairDTO repairDTO) {
         return repairService.addNewRepair(repairDTO);
     }
 
@@ -31,10 +31,9 @@ public class RepairController {
         return repairService.findByRepairId(repairId);
     }
 
-
     @RequestMapping("/customer/")
     public List<Repair> findRepairsByCustomerInfo
-            (@RequestParam(required = false, value = "customerid") Integer customerId,
+            (@RequestParam(required = false, value = "customerid") Long customerId,
              @RequestParam(required = false, value = "name") String name,
              @RequestParam(required = false, value = "surname") String surname,
              @RequestParam(required = false, value = "phone") String phoneNumber1,
@@ -45,7 +44,7 @@ public class RepairController {
 
     @RequestMapping("/device/")
     public List<Repair> findRepairsByDeviceInfo
-            (@RequestParam(required = false, value = "deviceId") Integer deviceId,
+            (@RequestParam(required = false, value = "deviceId") Long deviceId,
              @RequestParam(required = false, value = "imei") String imei,
              @RequestParam(required = false, value = "serialnumber") String serialNumber) throws InputMismatchException {
 
@@ -53,14 +52,14 @@ public class RepairController {
     }
 
     @RequestMapping("/technician/{technicianid}")
-    public List<Repair> findRepairsByDeviceInfo(@PathVariable("technicianid") Integer technicianId) throws InputMismatchException {
+    public List<Repair> findRepairsByDeviceInfo(@PathVariable("technicianid") Long technicianId) throws InputMismatchException {
 
         return repairService.findRepairsByTechnicianInfo(technicianId);
     }
 
     @RequestMapping("/status/")
     public List<Repair> findRepairsByStatusInfo(
-            @RequestParam(required = false, value = "statusid") Integer statusId,
+            @RequestParam(required = false, value = "statusid") Long statusId,
             @RequestParam(required = false, value = "status") String status) throws InputMismatchException {
 
         return repairService.findRepairsByStatusInfo(statusId, status);
@@ -68,7 +67,7 @@ public class RepairController {
 
     @RequestMapping("/repairtype/")
     public List<Repair> findRepairsByRepairTypeInfo(
-            @RequestParam(required = false, value = "repairtypeid") Integer repairTypeId,
+            @RequestParam(required = false, value = "repairtypeid") Long repairTypeId,
             @RequestParam(required = false, value = "repairtypename") String repairTypeName) throws InputMismatchException {
 
         return repairService.findRepairsByRepairTypeInfo(repairTypeId, repairTypeName);
@@ -86,7 +85,7 @@ public class RepairController {
 
 
 /* @RequestMapping("/id/{customerId}")
-     public List<Repair> findCustomerRepairs(@PathVariable("customerId") Integer customerId) {
+     public List<Repair> findCustomerRepairs(@PathVariable("customerId") Long customerId) {
          return repairService.findCustomerRepairs(customerId);
      }
 

@@ -54,3 +54,4 @@ public class Part {
 }
 
 
+// dodac rodzaj czesci - oryginal/zamiennik, nowa/uzywana

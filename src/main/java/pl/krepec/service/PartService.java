@@ -17,7 +17,7 @@ public class PartService {
 
 
     private PartDTO mapPart(Part part) {
-        PartDTO partDTO = new PartDTO(part.getPartTypeId(), part.getPartName(), part.getPrice());
+        PartDTO partDTO = new PartDTO(part.getPartId(),part.getPartTypeId(), part.getPartName(), part.getPrice());
         return partDTO;
     }
 
@@ -50,8 +50,8 @@ public class PartService {
         return partDTOList;
     }
 
-    public Integer addNewPart(PartDTO partDTO) {
-        Part part = partsRepository.save(new Part(partDTO.getPartTypeId(), partDTO.getPartName(), partDTO.getPrice()));
+    public Long addNewPart(PartDTO partDTO) {
+        Part part = partsRepository.save(new Part(partDTO.getPartId(),partDTO.getPartTypeId(), partDTO.getPartName(), partDTO.getPrice()));
         return part.getPartTypeId();
     }
 

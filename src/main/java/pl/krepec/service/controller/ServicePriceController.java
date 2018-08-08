@@ -2,19 +2,32 @@ package pl.krepec.service.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pl.krepec.service.ServicePriceService;
-import pl.krepec.service.repository.ServicePriceRepository;
+import pl.krepec.service.dto.ServicePriceDTO;
+
+import java.util.List;
 
 @RestController
-@RequestMapping("/serviceprice")
+@RequestMapping("/serviceprices")
 public class ServicePriceController {
 
     @Autowired
-    ServicePriceService serviceService;
+    private ServicePriceService servicePriceService;
+
+@RequestMapping("/serviceprices")
+public List<ServicePriceDTO> getAllServicePrice(){
+    return servicePriceService.getAllServices();
+}
+
+@RequestMapping("/{servicepriceid}")
+    public ServicePriceDTO findByServicePriceId(@PathVariable Long servicePriceId){
+    return servicePriceService.findByServicePriceId(servicePriceId);
+    }
 
 
-
+    @PostMapping("/serviceprices")
+    public Long addNewServicePrice(@RequestBody ServicePriceDTO servicePriceDTO ){
+    return servicePriceService.addNewServicePrice(servicePriceDTO);
+}
 }

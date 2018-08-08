@@ -6,14 +6,14 @@ import pl.krepec.service.StatusService;
 import pl.krepec.service.dto.StatusDTO;
 
 @RestController
-@RequestMapping("/status")
+@RequestMapping("/statuses")
 public class StatusController {
 
     @Autowired
     private
     StatusService statusService;
 
-    @GetMapping("/status")
+    @GetMapping("/statuses")
     public Iterable<StatusDTO> getAllStatuses() {
         return statusService.getAllStatuses();
     }
@@ -23,7 +23,7 @@ public class StatusController {
         return  statusService.findById(statusId);
     }
 
-    @PostMapping(value = "/status", consumes = "application/json")
+    @PostMapping(value = "/statuses", consumes = "application/json")
     public Integer addStatus(@RequestBody StatusDTO statusDTO){
         return statusService.addNewStatus(statusDTO);
     }

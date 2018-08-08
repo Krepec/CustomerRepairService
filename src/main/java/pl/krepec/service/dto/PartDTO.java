@@ -2,18 +2,27 @@ package pl.krepec.service.dto;
 
 public class PartDTO {
 
-
-    private Integer partTypeId;
+    private Long partId;
+    
+    private Long partTypeId;
 
     private String partName;
 
     private Double price;
 
-    public Integer getPartTypeId() {
+    public Long getPartId() {
+        return partId;
+    }
+
+    public void setPartId(Long partId) {
+        this.partId = partId;
+    }
+
+    public Long getPartTypeId() {
         return partTypeId;
     }
 
-    public void setPartTypeId(Integer partTypeId) {
+    public void setPartTypeId(Long partTypeId) {
         this.partTypeId = partTypeId;
     }
 
@@ -33,7 +42,8 @@ public class PartDTO {
         this.price = price;
     }
 
-    public PartDTO(Integer partTypeId, String partTypeName, Double price) {
+    public PartDTO(Long partId,Long partTypeId, String partTypeName, Double price) {
+        this.partId = partId;
         this.partTypeId = partTypeId;
         this.partName = partTypeName;
         this.price = price;

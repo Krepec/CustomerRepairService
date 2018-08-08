@@ -6,7 +6,6 @@ import pl.krepec.service.repository.model.ServicePrice;
 
 @Repository
 public interface ServicePriceRepository extends CrudRepository<ServicePrice, Long> {
-    ServicePrice findOne(String serviceName);
 
-    ServicePrice findOne(Double servicePrice);
+
 }

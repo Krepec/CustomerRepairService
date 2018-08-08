@@ -17,11 +17,12 @@ public class ServicePriceService {
 
 
     private ServicePriceDTO mapServiceProice(ServicePrice servicePrice) {
-        return new ServicePriceDTO(servicePrice.getServicePriceId(), servicePrice.getServiceName(), servicePrice.getServiceLevel(), servicePrice.getServicePrice());
+        return new ServicePriceDTO(servicePrice.getServicePriceId(), servicePrice.getServiceName(),
+                servicePrice.getServiceLevel(), servicePrice.getServicePrice());
     }
 
 
-    public ServicePriceDTO findById(Long servicePriceId) {
+    public ServicePriceDTO findByServicePriceId(Long servicePriceId) {
         ServicePrice service = servicePriceRepository.findOne(servicePriceId);
         return mapServiceProice(service);
     }
@@ -37,5 +38,11 @@ public class ServicePriceService {
             servicePriceDTOList.add(servicePriceDTO);
         }
         return servicePriceDTOList;
+    }
+
+    public Long addNewServicePrice(ServicePriceDTO servicePriceDTO){
+    ServicePrice servicePrice =  servicePriceRepository.save(new ServicePrice(servicePriceDTO.getServicePriceId(),servicePriceDTO.getServiceName(),
+            servicePriceDTO.getServiceLevel(),servicePriceDTO.getServicePrice()));
+    return  servicePrice.getServicePriceId();
     }
 }

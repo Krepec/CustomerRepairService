@@ -28,7 +28,7 @@ public class PartController {
     }
 
     @PostMapping(value = "parts", consumes = "application/json")
-    public Integer addPart(@RequestBody PartDTO partDTO) {
+    public Long addPart(@RequestBody PartDTO partDTO) {
         return partService.addNewPart(partDTO);
     }
 

@@ -8,7 +8,7 @@ public class ServicePrice {
 
     @Id
     @GeneratedValue
-    @Column(name = "ServiceID")
+    @Column(name = "Service_priceID")
     private Long servicePriceId;
 
     @Column(name = "Service_level")

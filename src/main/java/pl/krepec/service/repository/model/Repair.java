@@ -81,6 +81,10 @@ public class Repair {
     @JoinColumn(name = "repair_typeid", insertable = false, updatable = false)
     private RepairType repairType;
 
+    @ManyToOne
+    @JoinColumn(name = "part", insertable = false, updatable = false)
+    private Part part;
+
     public void setRepairId(Long repairId) {
         this.repairId = repairId;
     }

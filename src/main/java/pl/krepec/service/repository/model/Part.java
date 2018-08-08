@@ -9,8 +9,11 @@ public class Part {
 
     @Id
     @GeneratedValue
+    @Column(name = "PartID")
+    private Long partId;
+    
     @Column(name = "Part_typeID")
-    private Integer partTypeId;
+    private Long partTypeId;
 
     @Column(name = "Part_name")
     private String partName;
@@ -18,12 +21,24 @@ public class Part {
     @Column(name = "Price")
     private Double price;
 
+    @OneToMany(mappedBy="part")
+    private List<Repair> repairs;
 
-    public Integer getPartTypeId() {
+    @ManyToOne
+
+    public Long getPartId() {
+        return partId;
+    }
+
+    public void setPartId(Long partId) {
+        this.partId = partId;
+    }
+
+    public Long getPartTypeId() {
         return partTypeId;
     }
 
-    public void setPartTypeId(Integer partTypeId) {
+    public void setPartTypeId(Long partTypeId) {
         this.partTypeId = partTypeId;
     }
 
@@ -43,7 +58,8 @@ public class Part {
         this.price = price;
     }
 
-    public Part(Integer partTypeId, String partTypeName, Double price) {
+    public Part(Long partId, Long partTypeId, String partTypeName, Double price) {
+        this.partId = partId;
         this.partTypeId = partTypeId;
         this.partName = partTypeName;
         this.price = price;

@@ -108,13 +108,13 @@ public class CustomerService {
 
     }
 
-    public Long addNewCustomer(CustomerDTO customerDTO) {
+    public Customer addNewCustomer(CustomerDTO customerDTO) {
         Customer customer = customerRepository.save(new Customer(customerDTO.getCustomerId(), customerDTO.getName(),
                 customerDTO.getSurname(), customerDTO.getPhoneNumber1(), customerDTO.getPhoneNumber2(), customerDTO.getStreet(),
                 customerDTO.getBuildingNumber(), customerDTO.getFlatNumber(), customerDTO.getPostalCode(), customerDTO.getCity(),
                 customerDTO.getEmail()));
 
-        return customer.getCustomerId();
+        return customer;
     }
 
     private void getCustomerDTO(List<CustomerDTO> customerDTOList, Iterable<Customer> customerList) {

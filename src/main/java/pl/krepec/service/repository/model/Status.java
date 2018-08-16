@@ -1,8 +1,10 @@
 package pl.krepec.service.repository.model;
 
+import pl.krepec.service.dto.StatusDTO;
+
 import javax.persistence.*;
-import javax.websocket.OnError;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table(name = "status")
@@ -11,19 +13,19 @@ public class Status {
     @Id
     @GeneratedValue
     @Column(name = "StatusID")
-    private Integer statusId;
+    private Long statusId;
 
-    @Column(name = "StatusDTO")
+    @Column(name = "Status")
     private String status;
 
     @OneToMany(mappedBy = "status")
     public List<Repair> repairs;
 
-    public Integer getStatusId() {
+    public Long getStatusId() {
         return statusId;
     }
 
-    public void setStatusId(Integer statusId) {
+    public void setStatusId(Long statusId) {
         this.statusId = statusId;
     }
 
@@ -35,11 +37,28 @@ public class Status {
         this.status = status;
     }
 
-    public Status(Integer statusId, String status) {
+    public Status(Long statusId, String status) {
         this.statusId = statusId;
         this.status = status;
     }
 
     public Status() {
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Status status = (Status) obj;
+        return statusId.equals(status.getStatusId()) && this.status.equals(status.getStatus());
+
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(statusId, statusId);
+    }
+
+    @Override
+    public String toString() {
+        return "StatusId: " + statusId + " status: " + status;
+    }
 }
+

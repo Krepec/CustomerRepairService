@@ -28,7 +28,7 @@ public class CustomerDTO {
         this.customerId = customerId;
     }
 
-    public long getCustomerId() {
+    public Long getCustomerId() {
         return customerId;
     }
 
@@ -112,7 +112,7 @@ public class CustomerDTO {
         return email;
     }
 
-    public CustomerDTO(long customerId, String name, String surname, String phone_number1,
+    public CustomerDTO(Long customerId, String name, String surname, String phone_number1,
                        String phone_number2, String street, String building_number, String flat_number,
                        String postal_code, String city, String email) {
 

@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pl.krepec.service.StatusService;
 import pl.krepec.service.dto.StatusDTO;
+import pl.krepec.service.repository.model.Status;
 
 @RestController
 @RequestMapping("/statuses")
@@ -18,13 +19,13 @@ public class StatusController {
         return statusService.getAllStatuses();
     }
 
-    @GetMapping("/[id]")
+    @GetMapping("/{id}")
     public StatusDTO findById(@PathVariable ("id") Long statusId){
         return  statusService.findById(statusId);
     }
 
     @PostMapping(value = "/statuses", consumes = "application/json")
-    public Integer addStatus(@RequestBody StatusDTO statusDTO){
+    public Status addStatus(@RequestBody StatusDTO statusDTO){
         return statusService.addNewStatus(statusDTO);
     }
 

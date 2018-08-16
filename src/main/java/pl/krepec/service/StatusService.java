@@ -37,8 +37,9 @@ public class StatusService {
         return statusDTO;
     }
 
-    public Integer addNewStatus(StatusDTO statusDTO) {
-        Status status = statusRepository.save(new Status(statusDTO.getStatusId(), statusDTO.getStatus()));
-        return status.getStatusId();
+    public Status addNewStatus(StatusDTO statusDTO) {
+        return statusRepository.save(new Status(statusDTO.getStatusId(), statusDTO.getStatus()));
     }
+
+
 }

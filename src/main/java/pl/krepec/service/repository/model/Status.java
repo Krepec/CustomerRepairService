@@ -51,9 +51,10 @@ public class Status {
         return statusId.equals(status.getStatusId()) && this.status.equals(status.getStatus());
 
     }
+
     @Override
     public int hashCode() {
-        return Objects.hash(statusId, statusId);
+        return Objects.hash(status, statusId);
     }
 
     @Override

@@ -19,23 +19,23 @@ public class CustomerServiceTest {
     private CustomerService customerService;
 
     @Mock
-    private CustomerRepository customerRepository;
+    private CustomerRepository mockCustomerRepository;
 
     @Before
     public void setUp(){
-        MockitoAnnotations.initMocks(this); // inicjalizacja mocków w klasy CustomerServiceTest.class
+        MockitoAnnotations.initMocks(this);
 
     }
 
     @Test
 
-    public void shouldAddNewCustomerTest(){
+    public void shouldAddNewCustomer(){
 
         // given
-        Customer customer = new Customer(55,"Adam","Kowalski","123456",
+        Customer customer = new Customer(55L,"Adam","Kowalski","123456",
                 "654321","Wspolna","2","31","00-000",
                 "Warszawa","kowalski@yahoo.com");
-        when(customerRepository.save(any(Customer.class))).thenReturn(customer);
+        when(mockCustomerRepository.save(any(Customer.class))).thenReturn(customer);
 
         // when
         Customer result = customerService.addNewCustomer(new CustomerDTO());

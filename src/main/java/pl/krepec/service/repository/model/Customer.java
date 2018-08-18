@@ -2,6 +2,7 @@ package pl.krepec.service.repository.model;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table(name = "customers")
@@ -10,7 +11,7 @@ public class Customer {
     @Id
     @GeneratedValue
     @Column(name = "CustomerID")
-    private long customerId;
+    private Long customerId;
 
     @Column(name = "Name")
     private String name;
@@ -42,14 +43,14 @@ public class Customer {
     @Column(name = "Email")
     private String email;
 
-    @OneToMany(mappedBy="customer")
+    @OneToMany(mappedBy = "customer")
     private List<Repair> repairs;
 
-    public void setCustomerId(Integer customerId) {
+    public void setCustomerId(Long customerId) {
         this.customerId = customerId;
     }
 
-    public long getCustomerId() {
+    public Long getCustomerId() {
         return customerId;
     }
 
@@ -133,7 +134,7 @@ public class Customer {
         return email;
     }
 
-    public Customer(long customerId, String name, String surname, String phone_number1,
+    public Customer(Long customerId, String name, String surname, String phone_number1,
                     String phone_number2, String street, String building_number, String flat_number,
                     String postal_code, String city, String email) {
 
@@ -155,9 +156,24 @@ public class Customer {
     }
 
     @Override
+    public boolean equals(Object obj) {
+         Customer customer = (Customer) obj;
+
+        return customerId.equals(customer.getCustomerId()) == name.equals(customer.getName()) == surname.equals(customer.getSurname())
+                == phoneNumber1.equals(customer.getPhoneNumber1()) == phoneNumber2.equals(customer.getPhoneNumber2()) == street.equals(customer.getStreet())
+                == buildingNumber.equals(customer.getBuildingNumber()) == flatNumber.equals(customer.getFlatNumber()) == postalCode.equals(customer.getPostalCode())
+                == city.equals(customer.getCity()) == email.equals(customer.getEmail());
+    }
+
+    @Override
     public String toString() {
         return "Id: " + customerId + " Imię: " + name + " Nazwisko: \n" + surname + " Telefon1: " + phoneNumber1 + " Telefon2: " + phoneNumber2 +
                 " Ulica: " + street + " Numer budynku: " + buildingNumber + " Numer mieszkania: " + flatNumber + " Kod pocztowy: " + postalCode +
                 " Miasto: " + city + " E-mail: " + email;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(customerId,name,surname,phoneNumber1,phoneNumber2,street,buildingNumber,flatNumber,postalCode,city,email);
     }
 }

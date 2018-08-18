@@ -41,9 +41,9 @@ public class DeliveryTypeService {
 
 
 
-    public Long addNewDelivertyType(DeliveryTypeDTO deliveryTypeDTO) {
+    public DeliveryType addNewDelivertyType(DeliveryTypeDTO deliveryTypeDTO) {
         DeliveryType deliveryType = deliveryTypeRepository.save(new DeliveryType(deliveryTypeDTO.getDeliveryTypeId(), deliveryTypeDTO.getDeliveryType()));
-        return deliveryType.getDeliveryTypeId();
+        return deliveryType;
     }
 
 

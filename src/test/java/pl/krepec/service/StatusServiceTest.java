@@ -5,7 +5,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
-import org.mockito.Matchers;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import pl.krepec.service.dto.StatusDTO;
@@ -29,14 +28,6 @@ public class StatusServiceTest {
         MockitoAnnotations.initMocks(this);
     } // inicjalizacja mocków w tej klasie (this)
 
-    @Test
-    public void shouldReadFromDataBase() {
-
-        Status status = new Status(1L, "Trwa");
-        when(mockStatusRepository.findOne(Matchers.anyObject())).thenReturn(status);
-
-
-    }
 
     @Test
     public void shpuldAddNewStatus() {
@@ -45,7 +36,7 @@ public class StatusServiceTest {
         Status status = new Status(1L, "In progres");  // inicjalizujemy obiekt którychcemy zwracać
         when(mockStatusRepository.save(any(Status.class))).thenReturn(status); // kiedy zostanie wywołana metoda save z (any) kazdym elementem to zwróć obiekt status
 
-
+        // when
         Status result = statusService.addNewStatus(new StatusDTO());  // wywołanie metody addNewStatus która wg, powyższego when powinna zwrocic obiekt status
 
         // then

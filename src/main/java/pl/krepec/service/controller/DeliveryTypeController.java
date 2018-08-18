@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pl.krepec.service.DeliveryTypeService;
 import pl.krepec.service.dto.DeliveryTypeDTO;
+import pl.krepec.service.repository.model.DeliveryType;
 
 @RestController
 @RequestMapping("/deliverytypes")
@@ -23,7 +24,7 @@ public class DeliveryTypeController {
     }
 
     @PostMapping(value = "/deliverytypes", consumes = "application/json")
-    public Long addDeliveryType(@RequestBody DeliveryTypeDTO deliveryTypeDTO) {
+    public DeliveryType addDeliveryType(@RequestBody DeliveryTypeDTO deliveryTypeDTO) {
         return deliveryTypeService.addNewDelivertyType(deliveryTypeDTO);
     }
 

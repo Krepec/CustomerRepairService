@@ -33,16 +33,6 @@ public class StatusDTO {
     public StatusDTO() {
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        Status status = (Status) obj;
-        return statusId.equals(status.getStatusId()) && this.status.equals(status.getStatus());
-
-    }
-    @Override
-    public int hashCode() {
-        return Objects.hash(statusId, statusId);
-    }
 
     @Override
     public String toString() {

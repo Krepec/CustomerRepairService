@@ -58,4 +58,12 @@ public class ServicePrice {
         this.serviceName = serviceName;
         this.servicePrice = servicePrice;
     }
+
+    @Override
+    public String toString() {
+        return "ID ceny naprawy: " + servicePriceId + " Lewel naprawy; " + serviceLevel + " Naprawa: " + serviceName + " Cena naprawy: " + servicePrice;
+    }
+
+
 }
+

@@ -40,9 +40,9 @@ public class ServicePriceService {
         return servicePriceDTOList;
     }
 
-    public Long addNewServicePrice(ServicePriceDTO servicePriceDTO){
+    public ServicePrice addNewServicePrice(ServicePriceDTO servicePriceDTO){
     ServicePrice servicePrice =  servicePriceRepository.save(new ServicePrice(servicePriceDTO.getServicePriceId(),servicePriceDTO.getServiceName(),
             servicePriceDTO.getServiceLevel(),servicePriceDTO.getServicePrice()));
-    return  servicePrice.getServicePriceId();
+    return  servicePrice;
     }
 }

@@ -39,8 +39,8 @@ public class TechnicianService {
         return technicianDTO;
     }
 
-    public Integer addNewTechnician(TechnicianDTO technicianDTO) {
+    public Technician addNewTechnician(TechnicianDTO technicianDTO) {
         Technician technician = technicianRepository.save(new Technician(technicianDTO.getTechnicianId(), technicianDTO.getName(), technicianDTO.getSurname()));
-        return technician.getTechnicianId();
+        return technician;
     }
 }

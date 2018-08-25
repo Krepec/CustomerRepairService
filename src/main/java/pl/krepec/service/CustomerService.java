@@ -122,6 +122,7 @@ public class CustomerService {
             CustomerDTO customerDTO = mapCustomer(customer);
             customerDTOList.add(customerDTO);
         }
+
     }
 
 

@@ -129,14 +129,11 @@ public class RepairCriteriaRepository {
     }
 
     private List<Repair> getRepairsByStatus(CriteriaQuery<Repair> criteriaQuery, Join<Status, Repair> repairs, Predicate inputPredicate) {
-        List<Repair> customersRepairList = new ArrayList<>();
         criteriaQuery.select(repairs).where(inputPredicate);
         List<Repair> results = entityManager.createQuery(criteriaQuery).getResultList();
-        for (Repair repair : results) {
-            customersRepairList.add(repair);
 
-        }
-        return customersRepairList;
+
+        return results;
     }
 
     public List<Repair> findRepairsByRepairTypeInfo(Long repairTypeId, String repairTypeName) throws InputMismatchException {

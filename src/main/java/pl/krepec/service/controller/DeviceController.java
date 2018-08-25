@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pl.krepec.service.DeviceService;
 import pl.krepec.service.dto.DeviceDTO;
+import pl.krepec.service.repository.model.Device;
 
 @RestController
 @RequestMapping("/devices")
@@ -26,7 +27,7 @@ public class DeviceController {
     }
 
     @PostMapping(value = "/devices", consumes = "application/json")
-    public Long addDevice(@RequestBody DeviceDTO deviceDTO) {
+    public Device addDevice(@RequestBody DeviceDTO deviceDTO) {
         return deviceService.addNewDevice(deviceDTO);
     }
 

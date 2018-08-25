@@ -50,9 +50,9 @@ public class PartService {
         return partDTOList;
     }
 
-    public Long addNewPart(PartDTO partDTO) {
+    public Part addNewPart(PartDTO partDTO) {
         Part part = partsRepository.save(new Part(partDTO.getPartId(),partDTO.getPartTypeId(), partDTO.getPartName(), partDTO.getPrice()));
-        return part.getPartTypeId();
+        return part;
     }
 
 

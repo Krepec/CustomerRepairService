@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pl.krepec.service.PartService;
 import pl.krepec.service.dto.PartDTO;
+import pl.krepec.service.repository.model.Part;
 
 @RestController
 @RequestMapping("/parts")
@@ -28,7 +29,7 @@ public class PartController {
     }
 
     @PostMapping(value = "parts", consumes = "application/json")
-    public Long addNewPart(@RequestBody PartDTO partDTO) {
+    public Part addNewPart(@RequestBody PartDTO partDTO) {
         return partService.addNewPart(partDTO);
     }
 

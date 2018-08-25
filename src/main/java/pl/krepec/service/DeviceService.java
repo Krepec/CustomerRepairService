@@ -108,10 +108,10 @@ public class DeviceService {
 
     }
 
-    public Long addNewDevice(DeviceDTO deviceDTO) {
+    public Device addNewDevice(DeviceDTO deviceDTO) {
         Device device = deviceRepository.save(new Device(deviceDTO.getDeviceId(), deviceDTO.getMark(),
                 deviceDTO.getModel(), deviceDTO.getSerialNumber(), deviceDTO.getImei(), deviceDTO.getComments()));
-        return deviceDTO.getDeviceId();
+        return device;
     }
 
 

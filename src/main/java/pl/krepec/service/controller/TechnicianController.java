@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pl.krepec.service.TechnicianService;
 import pl.krepec.service.dto.TechnicianDTO;
+import pl.krepec.service.repository.model.Technician;
 
 import java.util.List;
 
@@ -26,7 +27,7 @@ public class TechnicianController {
     }
 
     @PostMapping("/technicians")
-    public Integer addTechnician(@RequestBody TechnicianDTO technicianDTO){
+    public Technician addTechnician(@RequestBody TechnicianDTO technicianDTO){
         return technicianService.addNewTechnician(technicianDTO);
     }
 

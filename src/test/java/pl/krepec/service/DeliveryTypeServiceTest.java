@@ -28,9 +28,10 @@ public class DeliveryTypeServiceTest {
 
     @Test
     public void shouldAddNewDeliveryType(){
+
         // given
         DeliveryType deliveryType = new DeliveryType(1L, "Stacjonarna");
-        when(mockDeliveryTypeRepository.save(any(DeliveryType.class))).thenReturn(deliveryType);
+        when(mockDeliveryTypeRepository.save(any(DeliveryType.class))).thenReturn(deliveryType);    //przykład wywołania a jakimi kolwiek parametrami
 
         // when
         DeliveryType result = deliveryTypeService.addNewDelivertyType(new DeliveryTypeDTO());

@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pl.krepec.service.PartTypeService;
 import pl.krepec.service.dto.PartTypeDTO;
+import pl.krepec.service.repository.model.PartType;
 
 import java.util.List;
 
@@ -27,7 +28,7 @@ public class PartTypeController {
 
 
     @PostMapping("/parttypes")
-    public Integer addNewPartType(@RequestBody PartTypeDTO partTypeDTO) {
+    public PartType addNewPartType(@RequestBody PartTypeDTO partTypeDTO) {
         return partTypeService.addNewPartType(partTypeDTO);
     }
 

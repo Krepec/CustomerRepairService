@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pl.krepec.service.RepairTypeService;
 import pl.krepec.service.dto.RepairTypeDTO;
+import pl.krepec.service.repository.model.RepairType;
 
 import java.util.List;
 
@@ -26,7 +27,7 @@ public class RepairTypeController {
     }
 
     @PostMapping("/repairtypes")
-    public Integer addNewRepairType (@RequestBody RepairTypeDTO repairTypeDTO){
+    public RepairType addNewRepairType (@RequestBody RepairTypeDTO repairTypeDTO){
         return repairTypeService.addNewRepairType(repairTypeDTO);
     }
 

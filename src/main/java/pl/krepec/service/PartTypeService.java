@@ -38,8 +38,8 @@ public class PartTypeService {
        return mapPartTypes(partType);
     }
 
-    public Integer addNewPartType(PartTypeDTO partTypeDTO){
+    public PartType addNewPartType(PartTypeDTO partTypeDTO){
         PartType partType = partTypeRepository.save(new PartType(partTypeDTO.getPartTypeId(),partTypeDTO.getType()));
-        return partType.getPartTypeId();
+        return partType;
     }
 }

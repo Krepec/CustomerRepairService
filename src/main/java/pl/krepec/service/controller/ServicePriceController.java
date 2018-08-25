@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pl.krepec.service.ServicePriceService;
 import pl.krepec.service.dto.ServicePriceDTO;
+import pl.krepec.service.repository.model.ServicePrice;
 
 import java.util.List;
 
@@ -27,7 +28,7 @@ public List<ServicePriceDTO> getAllServicePrice(){
 
 
     @PostMapping("/serviceprices")
-    public Long addNewServicePrice(@RequestBody ServicePriceDTO servicePriceDTO ){
+    public ServicePrice addNewServicePrice(@RequestBody ServicePriceDTO servicePriceDTO ){
     return servicePriceService.addNewServicePrice(servicePriceDTO);
 }
 }

@@ -45,7 +45,14 @@ public class RepairService {
 
 
     public List<Repair> findRepairsByCustomerInfo(Long customerId, String name, String surname, String phoneNumber1, String email) throws InputMismatchException {
-        return repairCriteriaRepository.findRepairsByCustomerInfo(customerId, name, surname, phoneNumber1, email);
+
+        try {
+            return repairCriteriaRepository.findRepairsByCustomerInfo(customerId, name, surname, phoneNumber1, email);
+        }
+        catch (Exception e){
+            System.out.println("Nieprawidlowe wyszukiwanie");
+            return new ArrayList<>();
+        }
     }
 
     public List<Repair> findRepairsByDeviceInfo(Long deviceId, String imei, String serialNumber) throws InputMismatchException {

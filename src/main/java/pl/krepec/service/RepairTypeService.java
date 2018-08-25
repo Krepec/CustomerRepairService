@@ -36,8 +36,8 @@ public class RepairTypeService {
         return mapRepairType(repairType);
     }
 
-    public Integer addNewRepairType(RepairTypeDTO repairTypeDTO){
+    public RepairType addNewRepairType(RepairTypeDTO repairTypeDTO){
        RepairType repairType =  repairTypeRepository.save(new RepairType(repairTypeDTO.getRepairTypeId(),repairTypeDTO.getRepairTypeName()));
-       return repairType.getRepairTypeId();
+       return repairType;
     }
 }

@@ -11,7 +11,7 @@ import pl.krepec.service.dto.StatusDTO;
 import pl.krepec.service.repository.StatusRepository;
 import pl.krepec.service.repository.model.Status;
 
-import static org.mockito.Matchers.any;
+import static org.mockito.Matchers.refEq;
 import static org.mockito.Mockito.when;
 
 
@@ -34,10 +34,10 @@ public class StatusServiceTest {
 
         // given
         Status status = new Status(1L, "In progres");  // inicjalizujemy obiekt którychcemy zwracać
-        when(mockStatusRepository.save(any(Status.class))).thenReturn(status); // kiedy zostanie wywołana metoda save z (any) kazdym elementem to zwróć obiekt status
+        when(mockStatusRepository.save(refEq(new Status(2L,"Repaired")))).thenReturn(status); // kiedy zostanie wywołana metoda save referencją nowedo status id 2 status repaired wtedy zwróc status
 
         // when
-        Status result = statusService.addNewStatus(new StatusDTO());  // wywołanie metody addNewStatus która wg, powyższego when powinna zwrocic obiekt status
+        Status result = statusService.addNewStatus(new StatusDTO(2L,"Repaired"));  // wywołanie metody addNewStatus  parametrami 2 status repaired  która wg, powyższego when powinna zwrocic obiekt status
 
         // then
         Assert.assertEquals(status, result);

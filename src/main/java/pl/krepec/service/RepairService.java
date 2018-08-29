@@ -6,7 +6,9 @@ import pl.krepec.service.dto.RepairDTO;
 import pl.krepec.service.repository.RepairCriteriaRepository;
 import pl.krepec.service.repository.RepairRepository;
 import pl.krepec.service.repository.model.Repair;
+import pl.krepec.service.thread.DayCountProces;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -33,6 +35,7 @@ public class RepairService {
         for (Repair repair : repairList) {
             RepairDTO repairDTO = mapRepair(repair);
             repairDTOList.add(repairDTO);
+            System.out.println(repairDTO);
         }
         return repairDTOList;
     }
@@ -48,8 +51,7 @@ public class RepairService {
 
         try {
             return repairCriteriaRepository.findRepairsByCustomerInfo(customerId, name, surname, phoneNumber1, email);
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             System.out.println("Nieprawidlowe wyszukiwanie");
             return new ArrayList<>();
         }
@@ -71,7 +73,7 @@ public class RepairService {
         return repairCriteriaRepository.findRepairsByRepairTypeInfo(repaiRTypeId, repairTypeName);
     }
 
-    public RepairDTO findREpairById(Long id){
+    public RepairDTO findREpairById(Long id) {
         Repair repair = repairRepository.findOne(id);
         return mapRepair(repair);
     }
@@ -85,4 +87,10 @@ public class RepairService {
     }
 
 
+    @PostConstruct // zainicjalizowanie np. ta metoda jest wywoływoowyna po zainicjalizowaniu tego serwisu - repair service
+    public void init() {
+        DayCountProces dayCountProcess = new DayCountProces();
+        dayCountProcess.run(repairRepository);
+        System.out.println("Metoda uruchomiła sie");
+    }
 }

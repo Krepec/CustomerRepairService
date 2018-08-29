@@ -7,21 +7,24 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import pl.krepec.service.controller.CustomerController;
 import pl.krepec.service.repository.*;
 import pl.krepec.service.repository.model.*;
+import pl.krepec.service.thread.DayCountProces;
 
 @SpringBootApplication
 @EnableAutoConfiguration
 @EnableJpaRepositories
 public class App {
     public static void main(String[] args) {
-        SpringApplication.run(new Object[]{App.class,Customer.class, CustomerRepository.class, CustomerController.class, DeliveryType.class, DeliveryTypeRepository.class
-        , Device.class, DeviceRepository.class, Part.class, PartRepository.class, PartType.class, PartTypeRepository.class, Repair.class,RepairRepository.class,
-                RepairType.class, RepairTypeRepository.class, Status.class, StatusRepository.class,Technician.class,TechnicianRepository.class},args);
+        SpringApplication.run(new Object[]{App.class, Customer.class, CustomerRepository.class, CustomerController.class, DeliveryType.class, DeliveryTypeRepository.class
+                , Device.class, DeviceRepository.class, Part.class, PartRepository.class, PartType.class, PartTypeRepository.class, Repair.class, RepairService.class,
+                RepairType.class, RepairTypeRepository.class, Status.class, StatusRepository.class, Technician.class, TechnicianRepository.class, DayCountProces.class}, args);
+
+
+
 
 
 
 
     }
-
 
 
 }

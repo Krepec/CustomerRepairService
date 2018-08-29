@@ -10,7 +10,6 @@ import pl.krepec.service.repository.model.Customer;
 import java.util.List;
 
 
-@RestController
 @RequestMapping("/customers")
 public class CustomerController {
 

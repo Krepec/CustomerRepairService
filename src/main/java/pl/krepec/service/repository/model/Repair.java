@@ -212,4 +212,8 @@ public class Repair {
 
     }
 
+    @Override
+    public String toString() {
+        return "Numer naprawy: " + repairId + " Status: " + status;
+    }
 }

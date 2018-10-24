@@ -1,4 +1,4 @@
-package pl.krepec.service.thread;
+package pl.krepec.service.thread.Raport;
 
 import pl.krepec.service.repository.RepairRepository;
 import pl.krepec.service.repository.model.Repair;
@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DayCountProces {
+public class RepairInProgressRaport {
 
     public void run(RepairRepository repairaRepository) {
         new Thread() {
@@ -19,17 +19,17 @@ public class DayCountProces {
                     try {
                         System.out.println("Sleep sie wywołał");
                         Thread.sleep(10000);
-                        List<Repair> repairCompleted = new ArrayList<>();
+                        List<Repair> repairInProgress = new ArrayList<>();
                         Iterable<Repair> repairList = repairaRepository.findAll();
                         for (Repair repair : repairList) {
                             if (repair.getStatusId() == 1) {
-                                repairCompleted.add(repair);
+                                repairInProgress.add(repair);
                             }
 
                         }
 
-                        BufferedWriter writer = new BufferedWriter(new FileWriter("/tmp/report.txt"));
-                        for (Repair repair : repairCompleted) {
+                        BufferedWriter writer = new BufferedWriter(new FileWriter("/tmp/reportNaprawyWTrakcie.txt"));
+                        for (Repair repair : repairInProgress) {
                             String status = repair.toString() + "\n";
                             writer.write(status);
                         }

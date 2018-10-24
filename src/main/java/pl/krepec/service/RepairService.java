@@ -6,7 +6,8 @@ import pl.krepec.service.dto.RepairDTO;
 import pl.krepec.service.repository.RepairCriteriaRepository;
 import pl.krepec.service.repository.RepairRepository;
 import pl.krepec.service.repository.model.Repair;
-import pl.krepec.service.thread.DayCountProces;
+import pl.krepec.service.thread.Raport.RepairEndedRaport;
+import pl.krepec.service.thread.Raport.RepairInProgressRaport;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
@@ -89,7 +90,9 @@ public class RepairService {
 
     @PostConstruct // zainicjalizowanie np. ta metoda jest wywoływoowyna po zainicjalizowaniu tego serwisu - repair service
     public void init() {
-        DayCountProces dayCountProcess = new DayCountProces();
+        RepairInProgressRaport dayCountProcess = new RepairInProgressRaport();
+        RepairEndedRaport repairEndedRaport = new RepairEndedRaport();
+        repairEndedRaport.run(repairRepository);
         dayCountProcess.run(repairRepository);
         System.out.println("Metoda uruchomiła sie");
     }
